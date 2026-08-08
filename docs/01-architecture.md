@@ -1,9 +1,8 @@
 ---
 layout: page
 title: "01 — Choose the architecture"
+guide_header: true
 ---
-
-# 01 — Choose the architecture before ordering parts
 
 This decision controls the adapter, flywheel, mounts, front subframe, rack, steering shaft, oil-pan clearance and parts of the wiring strategy.
 
