@@ -1,0 +1,11 @@
+title: RX-8 K24 Swap Guide
+description: Research-backed sequential guide for K24 swapping a Mazda RX-8, with 2009 S2 and JDM K24A/RBB notes.
+theme: minima
+markdown: kramdown
+header_pages:
+  - index.md
+  - 01-architecture.md
+  - 02-bom-budget.md
+  - 03-jdm-k24a-engine-prep.md
+  - 09-electrical-ecu-can-s2.md
+  - references.md
