@@ -1,0 +1,25 @@
+<header class="guide-page-header">
+  <img
+    class="guide-header-art"
+    src="{{ '/assets/images/rx8-k24-header.png' | relative_url }}"
+    alt="RX8 K Swap — Rotary soul, K power, RWD swapped"
+    width="2048"
+    height="682"
+  >
+  <div class="guide-header-content">
+    <nav class="guide-breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li>
+          <a href="{{ '/' | relative_url }}">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8Z"/></svg>
+            Guide home
+          </a>
+        </li>
+        <li aria-current="page">{{ page.title | escape }}</li>
+      </ol>
+    </nav>
+    <div class="guide-page-heading">
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    </div>
+  </div>
+</header>
