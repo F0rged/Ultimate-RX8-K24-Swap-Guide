@@ -1,0 +1,10 @@
+# Require owner review for every repository change when CODEOWNERS review is
+# enabled in branch protection or repository rulesets.
+* @F0rged
+
+# Call out the highest-risk files explicitly for reviewers and future tooling.
+/.github/ @F0rged
+/docs/_config.yml @F0rged
+/docs/_includes/ @F0rged
+/docs/_layouts/ @F0rged
+/docs/assets/ @F0rged

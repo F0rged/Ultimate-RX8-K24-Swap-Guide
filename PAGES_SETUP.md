@@ -31,6 +31,10 @@ The shared page layout automatically adds comments to every guide chapter once t
 
 Use `AI_MAINTENANCE.md` as the standing instruction for research updates. Future AI edits should be done on branches with pull requests, not directly on `main`.
 
+## Public repository hardening
+
+Use `SECURITY_HARDENING.md` as the standing checklist for repository settings. The important rule is that `main` should require a pull request, a passing `build-docs` status check and approval from `@F0rged`.
+
 ## Optional next improvements
 
 - add photos that you own or have permission to publish
