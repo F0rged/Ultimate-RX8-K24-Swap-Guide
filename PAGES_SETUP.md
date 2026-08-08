@@ -1,15 +1,35 @@
-# GitHub Pages setup
+# GitHub Pages and comments setup
 
-This repository uses GitHub Pages' simple branch + `/docs` deployment.
+This repository publishes the `docs/` guide with GitHub Actions and GitHub Pages.
 
-1. Create a GitHub repository and copy these files to its root.
-2. Commit and push to your default branch.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the default branch and the `/docs` folder.
-6. Save.
+## Publish the site
 
-The `minima` theme and `_config.yml` keep the site dependency-light.
+1. Push this repository to GitHub.
+2. Go to **Settings -> Pages**.
+3. Under **Build and deployment**, choose **GitHub Actions**.
+4. Push to `main` or run the **Publish GitHub Pages** workflow manually.
+5. The site will publish to:
+
+   `https://f0rged.github.io/Ultimate-RX8-K24-Swap-Guide/`
+
+The `minima` theme and `_config.yml` keep the site dependency-light. The workflow in `.github/workflows/pages.yml` builds the `docs/` directory and deploys the generated site.
+
+## Enable giscus comments
+
+Giscus requires GitHub Discussions and the giscus GitHub App.
+
+1. In the repository, go to **Settings -> General -> Features** and enable **Discussions**.
+2. Install the giscus app from `https://github.com/apps/giscus` for this repository.
+3. Open `https://giscus.app/` and enter `F0rged/Ultimate-RX8-K24-Swap-Guide`.
+4. Use `pathname` mapping and choose a category that allows new discussions, such as `General`.
+5. Copy the generated `data-repo-id` and `data-category-id` values into `docs/_config.yml`.
+6. Change `giscus.enabled` from `false` to `true`.
+
+The shared page layout automatically adds comments to every guide chapter once those values are present.
+
+## AI-assisted maintenance
+
+Use `AI_MAINTENANCE.md` as the standing instruction for research updates. Future AI edits should be done on branches with pull requests, not directly on `main`.
 
 ## Optional next improvements
 

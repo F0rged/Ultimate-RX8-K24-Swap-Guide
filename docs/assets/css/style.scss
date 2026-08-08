@@ -1,0 +1,77 @@
+---
+---
+
+@import "minima";
+
+:root {
+  --guide-ink: #1f2328;
+  --guide-muted: #5b6572;
+  --guide-border: #d7dde5;
+  --guide-panel: #f7f9fb;
+  --guide-accent: #b6292f;
+}
+
+body {
+  color: var(--guide-ink);
+}
+
+.site-header {
+  border-top-color: var(--guide-accent);
+}
+
+.site-title,
+.site-title:visited {
+  font-weight: 700;
+}
+
+.rx8-guide-page {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.guide-kicker {
+  margin: 0 0 0.35rem;
+  color: var(--guide-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.post-content h2 {
+  margin-top: 2.2rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--guide-border);
+}
+
+.post-content table {
+  display: table;
+  width: 100%;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+}
+
+.post-content th {
+  background: var(--guide-panel);
+}
+
+.post-content blockquote {
+  border-left-color: var(--guide-accent);
+  color: var(--guide-muted);
+}
+
+.comments {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--guide-border);
+}
+
+.comments h2 {
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
+
+.giscus,
+.giscus-frame {
+  width: 100%;
+}
