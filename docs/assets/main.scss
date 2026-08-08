@@ -18,17 +18,47 @@ body {
 }
 
 .site-header {
+  min-height: 0;
   border-top-color: var(--guide-accent);
+}
+
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .site-title,
 .site-title:visited {
+  font-size: 1.35rem;
   font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.site-nav {
+  position: static;
+  float: none;
+  flex: 1 1 auto;
+  border: 0;
+  background: transparent;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.site-nav .page-link {
+  margin: 0 0 0 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
 }
 
 .rx8-guide-page {
   max-width: 880px;
   margin: 0 auto;
+  padding-top: 1.4rem;
 }
 
 .guide-kicker {
@@ -43,7 +73,7 @@ body {
 .guide-page-header {
   position: relative;
   overflow: hidden;
-  min-height: 108px;
+  min-height: 96px;
   margin: 0 0 1.6rem;
   border: 1px solid var(--guide-border);
   border-radius: 8px;
@@ -58,30 +88,61 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 58% center;
   background: #000;
+}
+
+.post-header + .post-content > h1:first-child,
+.guide-page-header + .post-content > h1:first-child {
+  display: none;
 }
 
 .guide-header-content {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.9fr);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.85fr);
   gap: 1rem;
   align-items: center;
-  min-height: 108px;
-  padding: 0.85rem 1rem;
+  min-height: 96px;
+  padding: 0.7rem 0.85rem;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.5) 42%,
-    rgba(0, 0, 0, 0.72) 100%
+    rgba(0, 0, 0, 0.86) 0%,
+    rgba(0, 0, 0, 0.62) 48%,
+    rgba(0, 0, 0, 0.78) 100%
   );
+}
+
+.guide-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.guide-header-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.guide-header-logo img {
+  display: block;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
 }
 
 .guide-breadcrumbs {
   margin: 0;
   font-size: 0.78rem;
+  min-width: 0;
 }
 
 .guide-breadcrumbs ol {
@@ -96,10 +157,18 @@ body {
 .guide-breadcrumbs li {
   display: flex;
   align-items: center;
+  min-width: 0;
   color: rgba(255, 255, 255, 0.78);
 }
 
+.guide-breadcrumbs li[aria-current="page"] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .guide-breadcrumbs li + li::before {
+  flex: 0 0 auto;
   margin-right: 0.55rem;
   color: rgba(255, 255, 255, 0.5);
   content: "/";
@@ -108,9 +177,9 @@ body {
 .guide-breadcrumbs a {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
   color: #fff;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .guide-breadcrumbs a:hover {
@@ -118,16 +187,10 @@ body {
   text-decoration: underline;
 }
 
-.guide-breadcrumbs svg {
-  width: 14px;
-  height: 14px;
-  fill: currentColor;
-}
-
 .guide-page-heading .post-title {
   margin: 0;
   color: #fff;
-  font-size: 1.45rem;
+  font-size: 1.3rem;
   line-height: 1.18;
   letter-spacing: 0;
   text-align: right;
@@ -135,14 +198,32 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .guide-page-header { min-height: 132px; }
-  .guide-header-art { object-position: 58% center; }
+  .site-header .wrapper {
+    display: block;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+  .site-nav {
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .site-nav .page-link {
+    margin: 0 0.7rem 0 0;
+    font-size: 0.88rem;
+  }
+  .guide-page-header { min-height: 128px; }
+  .guide-header-art { object-position: 66% center; }
   .guide-header-content {
     grid-template-columns: 1fr;
-    gap: 0.45rem;
+    gap: 0.55rem;
     align-content: center;
-    min-height: 132px;
+    min-height: 128px;
     padding: 0.85rem;
+  }
+  .guide-header-logo,
+  .guide-header-logo img {
+    width: 44px;
+    height: 44px;
   }
   .guide-breadcrumbs ol { gap: 0.4rem; }
   .guide-page-heading .post-title {
