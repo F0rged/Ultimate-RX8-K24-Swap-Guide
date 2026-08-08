@@ -1,0 +1,54 @@
+id,category,item,path,priority,qty,cost_low_usd,cost_typical_usd,cost_high_usd,price_basis,source,checked_date,notes
+ENG-001,engine,JDM K24A RBB long block,both,required,1,1100,1400,2000,market_snapshot,https://www.jdm-online.com/products/jdm-04-08-honda-k24a-2-4l-dohc-i-vtec-rbb-200hp-engine-k24a2-acura-tsx-33,2026-08-08,Verify RBB head and actual engine condition; shipping/tax varies.
+ENG-002,engine,USDM K24A water-pump housing,both,recommended,1,209,209,209,vendor_current,https://kpower.industries/products/usdm-k24a-water-pump-housing,2026-08-08,KPower specifically recommends this conversion for JDM RBB engines in North-American-style builds.
+ENG-003,engine,USDM-compatible water pump,both,recommended,1,45,75,130,planning_estimate,,2026-08-08,Match selected USDM housing.
+ENG-004,engine,USDM TSX-style alternator,both,recommended,1,120,220,350,planning_estimate,,2026-08-08,JDM alternator availability is a serviceability issue.
+ENG-005,engine,EP3/idler/accessory conversion hardware,both,recommended,1,60,120,220,planning_estimate,,2026-08-08,Confirm pulley/belt layout.
+ENG-006,engine,Baseline seals/plugs/fluids/service parts,both,recommended,1,250,600,1200,planning_estimate,,2026-08-08,Do not rebuild a healthy engine by default.
+ENG-007,engine,50-degree VTC gear,both,optional,1,359,359,359,vendor_current,https://kpower.industries/collections/universal-rwd-k-swap-parts,2026-08-08,"Performance/tuning option, not required for swap."
+ENG-008,engine,K20/PRB oil-pump conversion,both,optional,1,349,549,650,vendor_current,https://kpower.industries/collections/universal-rwd-k-swap-parts,2026-08-08,Only if chosen for RPM/oil-control strategy; pan must match.
+OIL-001,oil,Baffled pan for K24 RBB balance-shaft pump,kpower,recommended,1,339,339,339,vendor_current,https://kpower.industries/collections/04-11-rx8,2026-08-08,KPower/Unit2 option for tubular-subframe branch.
+OIL-002,oil,Baffle/pan solution for modified stock crossmember,collins,recommended,1,150,350,600,planning_estimate,,2026-08-08,Final selection must clear the actual modified crossmember/rack.
+DRV-001,driveline,K24/K20 to RX-8 adapter plate,collins,required,1,650,650,650,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,Reference retained-RX8-trans path.
+DRV-002,driveline,K-series to RX-8 flywheel,collins,required,1,861,861,861,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,Required by Collins conversion.
+DRV-003,driveline,K-to-RX-8 engine mounts,collins,required,1,400,400,400,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,
+DRV-004,driveline,K24 engine-mount bracket adapter,collins,required,1,204,204,204,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,
+DRV-005,driveline,RX-8 pilot bearing,collins,required,1,39,39,39,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,
+DRV-006,driveline,Flywheel bolt kit,collins,required,1,89,89,89,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,Use vendor-specified bolts/torque procedure.
+DRV-007,driveline,"RX-8 clutch system, ~375 ft-lb example",collins,recommended,1,396,396,586,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,Choose torque capacity and drivability to suit build.
+DRV-008,driveline,Mazda 6/Mazdaspeed6 clutch slave option,collins,recommended,1,86,86,86,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,Verify against current adapter revision.
+DRV-009,driveline,Used NC 5/6-speed,kpower,required,1,500,900,1500,planning_estimate,,2026-08-08,Only if choosing NC-trans branch; resolve PPF/driveshaft interface first.
+DRV-010,driveline,KPower NC adapter + flywheel,kpower,required,1,,,,tbd_vendor_quote,https://kpower.industries/collections/kpower-nc-mx5-swap-parts/products/kpower-nc-mx5-swap-kit-no-electronics,2026-08-08,Contained in NC package; public individual price not relied on here.
+CHS-001,chassis,Rack relocation spacer kit,collins,required,1,227,227,227,vendor_current,https://collinsperformancetechnologies.com/collections/mazda-rx-8,2026-08-08,
+CHS-002,chassis,Lexus IS250 steering joint 45206-30112,collins,required,1,70,120,200,planning_estimate,,2026-08-08,Collins specifies the part number; market price varies.
+CHS-003,chassis,Crossmember notch/boxing fabrication,collins,required,1,150,700,1800,planning_estimate,,2026-08-08,Cost depends heavily on DIY vs professional chassis fabrication.
+CHS-004,chassis,Firewall/cowl fabrication and heat protection,both,required,1,150,700,2000,planning_estimate,,2026-08-08,Plan for cut/weld even though some Collins configurations may only require recessing.
+CHS-005,chassis,ABS relocation bracket/line work,both,required,1,30,150,500,planning_estimate,,2026-08-08,Hydraulic line work may increase cost.
+CHS-006,chassis,KPower tubular NC/RX-8 subframe,kpower,required,1,920,920,920,vendor_current,https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries,2026-08-08,Direct-replacement claim from KPower.
+CHS-007,chassis,KPower NC/RX-8 K24 engine mount kit,kpower,required,1,399,399,399,vendor_current,https://kpower.industries/collections/kpower-nc-mx5-swap-parts/products/kpower-nc-mx5-swap-kit-no-electronics,2026-08-08,JDM K24A RBB supported.
+CHS-008,chassis,AWR engine mount pads,kpower,optional,1,298,298,298,vendor_current,https://kpower.industries/collections/04-11-rx8,2026-08-08,Factory NC rubber mounts are an alternative.
+STR-001,steering,NC hydraulic power-steering pump mounting kit,kpower,optional,1,249,249,249,vendor_current,https://kpower.industries/products/k-swap-nc-power-steering-kit,2026-08-08,Requires complete NC rack/hydraulic parts.
+STR-002,steering,"Used/new NC rack, pump/reservoir/lines allowance",kpower,optional,1,250,500,1000,planning_estimate,,2026-08-08,For hydraulic conversion.
+STR-003,steering,Standalone RX-8 EPS kit,kpower,optional,1,1235,1235,1235,vendor_current,https://kpower.industries/collections/04-11-rx8,2026-08-08,Alternative to NC hydraulic or OEM-CAN EPS.
+COL-001,cooling,RBB intake-side NC/RX-8 coolant neck,both,required,1,249,249,249,vendor_current,https://kpower.industries/products/k24a2-upper-coolant-neck-for-nc-mx5,2026-08-08,Use during mock-up.
+COL-002,cooling,Koyo 2009–2011 RX-8 radiator,both,recommended,1,433,433,433,vendor_current,https://kpower.industries/collections/04-11-rx8,2026-08-08,Example S2-specific radiator.
+COL-003,cooling,Hoses/fittings/overflow/bleed hardware,both,required,1,150,300,600,planning_estimate,,2026-08-08,Build after engine position is fixed.
+INT-001,intake,KPower RWD cast intake manifold,both,recommended,1,675,675,750,vendor_current,https://kpower.industries/collections/06-15-mx5-miata,2026-08-08,
+INT-002,intake,Bosch 74 mm DBW throttle body,both,recommended,1,249,249,249,vendor_current,https://kpower.industries/collections/06-15-mx5-miata,2026-08-08,
+INT-003,intake,DBW throttle-body adapter,both,recommended,1,109,109,374,vendor_current,https://kpower.industries/collections/06-15-mx5-miata,2026-08-08,KPower or premium vibration-isolating alternative.
+INT-004,intake,3-inch intake/filter,both,recommended,1,249,249,350,vendor_current,https://kpower.industries/collections/04-11-rx8,2026-08-08,Build final tube after accessory/radiator placement.
+EXH-001,exhaust,KPower 4-2-1 RX-8-confirmed header,both,recommended,1,939,939,939,vendor_current,https://kpower.industries/collections/04-11-rx8,2026-08-08,Header described by KPower as confirmed on K-swapped RX-8.
+EXH-002,exhaust,Downstream exhaust fabrication,both,required,1,350,750,1500,planning_estimate,,2026-08-08,Catalyst/legal requirements are jurisdiction-specific.
+FUE-001,fuel,KPower fuel rail,both,recommended,1,140,140,140,vendor_current,https://kpower.industries/collections/06-15-mx5-miata,2026-08-08,
+FUE-002,fuel,Fuel pressure regulator,both,recommended,1,190,250,335,vendor_current,https://kpower.industries/collections/06-15-mx5-miata,2026-08-08,Fuelab/Radium examples.
+FUE-003,fuel,Fuel hose/fittings/filter/return allowance,both,required,1,200,400,800,planning_estimate,,2026-08-08,Architecture-dependent.
+FUE-004,fuel,Injectors / service allowance,both,recommended,1,100,450,1000,planning_estimate,,2026-08-08,Stock injectors may be adequate for some NA builds; verify duty and connector/data.
+ECU-001,electronics,KPower universal DBW electronics package / Haltech,both,recommended,1,4195,4195,4500,vendor_current,https://kpower.industries/products/power-universal-drive-by-wire-electronics-package,2026-08-08,Reference S2 engine-management strategy.
+ECU-002,electronics,Haltech iC-7 or equivalent standalone dash,both,recommended,1,1195,1195,1300,vendor_current,https://kpower.industries/collections/04-11-rx8,2026-08-08,Recommended while S2 OEM CAN remains unproven.
+ECU-003,electronics,RX-8 CAN emulator,both,optional,1,200,200,200,vendor_current,https://collinsperformancetechnologies.com/products/rx-8-wiring-emulator-for-canbus,2026-08-08,Do not make primary S2 plan until vendor confirms 2009 S2 application.
+ECU-004,electronics,Wiring/fuse/relay/grounding consumables,both,required,1,150,350,700,planning_estimate,,2026-08-08,Motorsport-grade crimping strongly preferred.
+AC-001,accessories,KPower NC A/C mounting kit,kpower,optional,1,769,769,769,vendor_current,https://kpower.industries/products/k-swap-nc-air-conditioning-kit,2026-08-08,Physical mounting solution; S2 control integration remains separate.
+AC-002,accessories,NC compressor/custom A/C lines/recharge,kpower,optional,1,350,700,1200,planning_estimate,,2026-08-08,
+SRV-001,services,ECU dyno/road tuning,both,required,1,500,800,1400,planning_estimate,,2026-08-08,Local market dependent.
+SRV-002,services,Four-wheel alignment + bump-steer measurement allowance,collins,required,1,200,400,800,planning_estimate,,2026-08-08,Rack-relocated cars need more than a basic toe set.
+MSC-001,misc,"Fluids, fasteners, heat shielding, clamps, abrasives",both,required,1,400,800,1500,planning_estimate,,2026-08-08,Often underestimated.

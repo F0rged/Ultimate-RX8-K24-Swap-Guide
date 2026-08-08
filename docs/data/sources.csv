@@ -1,0 +1,24 @@
+name,type,url,use,checked_date
+KPower RX-8 compatibility guide,manufacturer,https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries,Core RX-8/KPower fitment and S2 electronics caveats,2026-08-08
+KPower RX-8 collection,manufacturer,https://kpower.industries/collections/04-11-rx8,Current parts/prices,2026-08-08
+KPower NC Race package,manufacturer,https://kpower.industries/collections/kpower-nc-mx5-swap-parts/products/kpower-nc-mx5-swap-kit-no-electronics,NC architecture components/cost benchmark,2026-08-08
+KPower complete NC package,manufacturer,https://kpower.industries/collections/items-with-lead-times/products/complete-kpower-nc-mx5-swap-package,Sensor/mount compatibility and component architecture,2026-08-08
+KPower USDM K24A water-pump housing,manufacturer,https://kpower.industries/products/usdm-k24a-water-pump-housing,JDM RBB accessory differences,2026-08-08
+KPower RBB NC coolant neck,manufacturer,https://kpower.industries/products/k24a2-upper-coolant-neck-for-nc-mx5,Rear coolant-outlet packaging,2026-08-08
+KPower NC hydraulic PS kit,manufacturer,https://kpower.industries/products/k-swap-nc-power-steering-kit,Hydraulic steering alternative,2026-08-08
+KPower NC A/C kit,manufacturer,https://kpower.industries/products/k-swap-nc-air-conditioning-kit,A/C mechanical architecture,2026-08-08
+KPower installation guides,manufacturer,https://kpower.industries/pages/installation-guides,Basemap/harness guide index,2026-08-08
+Collins K-to-RX8 swap kit,manufacturer,https://collinsperformancetechnologies.com/products/honda-k-series-to-mazda-rx-8-swap-kit,RX8 gearbox support/components,2026-08-08
+Collins install instructions,manufacturer,https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions,Reference mechanical sequence,2026-08-08
+Collins RX8 collection,manufacturer,https://collinsperformancetechnologies.com/collections/mazda-rx-8,Component prices,2026-08-08
+Collins RX8 CAN emulator,vendor,https://collinsperformancetechnologies.com/products/rx-8-wiring-emulator-for-canbus,Candidate CAN interface,2026-08-08
+All4Swap RX8 interface,vendor,https://all4swap.ru/product/rx8,CAN emulator feature/model-year ordering evidence,2026-08-08
+2009 RX8 fuel pressure service page,service_manual_mirror,https://charm.li/Mazda/2009/RX8%202RTR-1.3L/Repair%20and%20Diagnosis/Powertrain%20Management/Tune-up%20and%20Engine%20Performance%20Checks/Fuel%20Pressure/Testing%20and%20Inspection/,S2 fuel pressure spec,2026-08-08
+K24RX8 Initial Fitment,completed_build,https://k24rx8.com/2018/10/23/initial-fitment/,Firewall/cowl/subframe lessons,2026-08-08
+K24RX8 Some Assembly Required,completed_build,https://k24rx8.com/2019/04/08/some-assembly-required/,Head/coolant/oil-pump lessons,2026-08-08
+K24RX8 K24 Gets a New Home,completed_build,https://k24rx8.com/2019/05/04/k24-gets-a-new-home/,Installation/wiring lessons,2026-08-08
+K-Swapped RX8 Fitting Part 1,completed_build,https://www.kswappedrx8.com/2021/03/fitting-k24-into-car-part-one.html,JDM K24A firewall/ABS/rack lessons,2026-08-08
+K-Swapped RX8 Fitting Part 2,completed_build,https://www.kswappedrx8.com/2021/04/fitting-k24-part-2.html,PPF/firewall/installation lessons,2026-08-08
+JDM Alliance K24A RBB listing,market,https://www.jdm-online.com/products/jdm-04-08-honda-k24a-2-4l-dohc-i-vtec-rbb-200hp-engine-k24a2-acura-tsx-33,Current US engine-market snapshot,2026-08-08
+Japan Motor Import K24A RBB listing,market,https://japanmotorimport.ca/products/jdm-hondaacura-tsx-k24a-k24a2-rbb-3-lobe-engine,Current Canadian engine-market snapshot,2026-08-08
+RX8 reverse engineering,community_research,https://github.com/rnd-ash/rx8-reverse-engineering,CAN research starting point,2026-08-08
