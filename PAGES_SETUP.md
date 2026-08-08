@@ -10,7 +10,7 @@ This repository publishes the `docs/` guide with GitHub Actions and GitHub Pages
 4. Push to `main` or run the **Publish GitHub Pages** workflow manually.
 5. The site will publish to:
 
-   `https://f0rged.github.io/Ultimate-RX8-K24-Swap-Guide/`
+   `http://rx8-kswap.importfanatik.com/`
 
 The `minima` theme and `_config.yml` keep the site dependency-light. The workflow in `.github/workflows/pages.yml` builds the `docs/` directory and deploys the generated site.
 
