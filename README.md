@@ -46,7 +46,7 @@ This repo publishes with GitHub Pages and the workflow in `.github/workflows/pag
 
 Expected URL:
 
-`https://f0rged.github.io/Ultimate-RX8-K24-Swap-Guide/`
+`http://rx8-kswap.importfanatik.com/`
 
 See `PAGES_SETUP.md` for the one-time giscus comments setup. See `AI_MAINTENANCE.md` for the branch-and-PR workflow future AI research updates should follow.
 
