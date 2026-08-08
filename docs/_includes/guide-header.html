@@ -1,30 +1,10 @@
 <header class="guide-page-header">
-  <img
-    class="guide-header-art"
-    src="{{ '/assets/images/rx8-k24-header.png' | relative_url }}"
-    alt=""
-    aria-hidden="true"
-    width="2048"
-    height="682"
-  >
   <div class="guide-header-content">
     <div class="guide-header-left">
       <a class="guide-header-logo" href="{{ '/' | relative_url }}" aria-label="RX-8 K24 Swap Guide home">
-        <img
-          src="{{ '/assets/images/rx8-k24-logo.svg' | relative_url }}"
-          alt=""
-          width="256"
-          height="256"
-        >
+        {% include guide-logo.svg %}
       </a>
-      <nav class="guide-breadcrumbs" aria-label="Breadcrumb">
-        <ol>
-          <li>
-            <a href="{{ '/' | relative_url }}">Guide home</a>
-          </li>
-          <li aria-current="page">{{ page.title | escape }}</li>
-        </ol>
-      </nav>
+      {% include breadcrumbs.html %}
     </div>
     <div class="guide-page-heading">
       <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>

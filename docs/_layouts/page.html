@@ -2,17 +2,8 @@
 layout: default
 ---
 
-{% assign is_home = page.url == "/" %}
-
 <article class="page-content rx8-guide-page" itemscope itemtype="http://schema.org/Article">
-  {% unless is_home %}
-    {% include guide-header.html %}
-  {% else %}
-    <header class="post-header">
-      <p class="guide-kicker">RX-8 K24 Swap Guide</p>
-      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    </header>
-  {% endunless %}
+  {% include guide-header.html %}
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
