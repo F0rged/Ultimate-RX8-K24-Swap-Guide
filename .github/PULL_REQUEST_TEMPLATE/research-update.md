@@ -14,3 +14,8 @@
 
 - [ ] Previewed the affected pages locally or through GitHub Pages.
 - [ ] Checked tables, links, and chapter navigation.
+
+## Security-sensitive changes
+
+- [ ] This PR does not add or modify workflows, scripts, Jekyll layouts/includes, site config, remote assets or third-party embeds.
+- [ ] If it does, the PR body explains why the change is needed and how it preserves the public-repo hardening rules in `SECURITY_HARDENING.md`.
