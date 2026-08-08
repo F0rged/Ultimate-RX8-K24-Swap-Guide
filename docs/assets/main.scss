@@ -22,6 +22,20 @@ body {
   border-top-color: var(--guide-accent);
 }
 
+.site-masthead-link {
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+
+.site-masthead-image {
+  display: block;
+  width: 100%;
+  height: clamp(120px, 18vw, 220px);
+  object-fit: contain;
+  background: #000;
+}
+
 .site-header .wrapper {
   display: flex;
   align-items: center;
@@ -71,17 +85,9 @@ body {
 }
 
 .guide-page-header {
-  position: relative;
-  overflow: hidden;
-  min-height: 96px;
   margin: 0 0 1.6rem;
-  border: 1px solid var(--guide-border);
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.62)),
-    url("images/rx8-k24-header.png") 58% center / cover no-repeat,
-    var(--guide-dark);
-  box-shadow: 0 8px 20px rgba(23, 27, 34, 0.14);
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--guide-border);
 }
 
 .post-header + .post-content > h1:first-child,
@@ -90,38 +96,8 @@ body {
 }
 
 .guide-header-content {
-  position: relative;
-  z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.85fr);
-  gap: 1rem;
-  align-items: center;
-  min-height: 96px;
-  padding: 0.7rem 0.85rem;
-}
-
-.guide-header-left {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  min-width: 0;
-}
-
-.guide-header-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  width: 52px;
-  height: 52px;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
-}
-
-.guide-header-logo-svg {
-  display: block;
-  width: 52px;
-  height: 52px;
+  gap: 0.45rem;
 }
 
 .guide-breadcrumbs {
@@ -144,7 +120,7 @@ body {
   display: flex;
   align-items: center;
   min-width: 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--guide-muted);
 }
 
 .guide-breadcrumbs li[aria-current="page"] {
@@ -156,31 +132,29 @@ body {
 .guide-breadcrumbs li + li::before {
   flex: 0 0 auto;
   margin-right: 0.55rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #9299a3;
   content: "/";
 }
 
 .guide-breadcrumbs a {
   display: inline-flex;
   align-items: center;
-  color: #fff;
+  color: var(--guide-accent);
   font-weight: 600;
   white-space: nowrap;
 }
 
 .guide-breadcrumbs a:hover {
-  color: #fff;
+  color: #861d25;
   text-decoration: underline;
 }
 
 .guide-page-heading .post-title {
   margin: 0;
-  color: #fff;
-  font-size: 1.3rem;
+  color: var(--guide-ink);
+  font-size: 1.45rem;
   line-height: 1.18;
   letter-spacing: 0;
-  text-align: right;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-width: 600px) {
@@ -189,6 +163,7 @@ body {
     padding-top: 0.65rem;
     padding-bottom: 0.65rem;
   }
+  .site-masthead-image { height: 120px; }
   .site-nav {
     margin-top: 0.35rem;
     line-height: 1.5;
@@ -197,27 +172,12 @@ body {
     margin: 0 0.7rem 0 0;
     font-size: 0.88rem;
   }
-  .guide-page-header {
-    min-height: 128px;
-    background-position: 66% center;
-  }
   .guide-header-content {
-    grid-template-columns: 1fr;
     gap: 0.55rem;
-    align-content: center;
-    min-height: 128px;
     padding: 0.85rem;
   }
-  .guide-header-logo,
-  .guide-header-logo-svg {
-    width: 44px;
-    height: 44px;
-  }
   .guide-breadcrumbs ol { gap: 0.4rem; }
-  .guide-page-heading .post-title {
-    font-size: 1.25rem;
-    text-align: left;
-  }
+  .guide-page-heading .post-title { font-size: 1.25rem; }
 }
 
 .post-content h2 {
