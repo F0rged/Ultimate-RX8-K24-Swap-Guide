@@ -248,7 +248,8 @@
       : Core.matchingRules(current, rules);
     activeRules.forEach(function (rule) {
       const panel = document.createElement("div");
-      panel.className = "build-config-alert build-config-alert--" + (rule.severity || "info");
+      const tone = Core.isPositiveRule(rule) ? "recommendation" : "warning";
+      panel.className = "build-config-alert build-config-alert--" + tone;
 
       const heading = document.createElement("strong");
       heading.textContent = "For your build";
@@ -295,39 +296,10 @@
     body.className = "variant-note__body";
     while (block.firstChild) body.appendChild(block.firstChild);
 
-    const toggle = document.createElement("button");
-    toggle.type = "button";
-    toggle.className = "variant-note__toggle";
-    toggle.hidden = true;
-    toggle.setAttribute("aria-expanded", "true");
-
-    toggle.addEventListener("click", function () {
-      const collapsed = block.classList.toggle("variant-note--collapsed");
-      toggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
-      toggle.textContent = collapsed
-        ? "Show alternative: " + (block.dataset.variantLabel || "variant guidance")
-        : "Hide alternative: " + (block.dataset.variantLabel || "variant guidance");
-    });
-
-    block.appendChild(toggle);
     block.appendChild(body);
   }
 
-  function setCollapsed(block, collapsed) {
-    prepareVariantBlock(block);
-    const toggle = Array.prototype.find.call(block.children, function (child) {
-      return child.classList && child.classList.contains("variant-note__toggle");
-    });
-    block.classList.toggle("variant-note--collapsed", collapsed);
-    if (toggle) {
-      toggle.hidden = !collapsed;
-      toggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
-      toggle.textContent = "Show alternative: " + (block.dataset.variantLabel || "variant guidance");
-    }
-  }
-
   function applyVariantFiltering() {
-    const mode = "context";
     const enabled = guidanceEnabled(config);
 
     document.querySelectorAll(".variant-note[data-when]").forEach(function (block) {
@@ -336,22 +308,19 @@
       if (!enabled) {
         block.hidden = true;
         block.dataset.filterState = "disabled";
-        block.classList.remove("variant-note--collapsed", "variant-note--safety");
-        setCollapsed(block, false);
+        block.classList.remove("variant-note--recommendation", "variant-note--warning");
         return;
       }
 
-      const display = Core.variantDisplayState(
-        config,
-        block.dataset.when,
-        mode,
-        block.dataset.safety
-      );
+      const filterState = Core.selectedValueCount(config) > 0
+        ? Core.evaluateExpression(config, block.dataset.when)
+        : "unknown";
+      const isWarning = block.dataset.safety === "true";
 
-      block.dataset.filterState = display.filterState;
-      block.classList.toggle("variant-note--safety", block.dataset.safety === "true");
-      block.hidden = display.hidden;
-      setCollapsed(block, display.collapsed);
+      block.dataset.filterState = filterState;
+      block.classList.toggle("variant-note--recommendation", !isWarning);
+      block.classList.toggle("variant-note--warning", isWarning);
+      block.hidden = filterState !== "match";
     });
   }
 
