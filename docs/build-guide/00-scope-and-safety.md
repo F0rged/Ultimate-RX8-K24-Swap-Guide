@@ -82,3 +82,12 @@ Stop and correct the issue if any of these occur:
 - oil pressure is not established before first firing
 - the ECU has no working over-temperature / low-oil-pressure safety strategy
 - ABS/DSC warning state is being hidden without understanding whether the system functions
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| Collins describes firewall recessing for its retained-RX-8-transmission configuration and says its setup can be installed without cutting through the firewall. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
+| KPower's RX-8-compatible architecture should be expected to require extensive firewall cutting and welding. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| Completed K24 RX-8 builds document cowl/firewall packaging conflicts and repeated mock-up needs. | [K24RX8](https://k24rx8.com/2018/10/23/initial-fitment/) |
+| A JDM K24A/RBB-head RX-8 build documents firewall, ABS, rack and subframe issues. | [K-Swapped RX-8](https://www.kswappedrx8.com/2021/03/fitting-k24-into-car-part-one.html) |

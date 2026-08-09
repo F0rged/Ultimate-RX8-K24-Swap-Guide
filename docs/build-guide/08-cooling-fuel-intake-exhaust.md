@@ -95,3 +95,13 @@ Before first start:
 - throttle moves correctly in ECU calibration with engine off
 - exhaust and O2 sensors are installed
 - no hose/wire is within unsafe distance of header without shielding
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| KPower's RX-8 catalog lists RX-8-specific cooling, intake, electronics and exhaust-related components, including S2 radiator context. | [KPower Industries](https://kpower.industries/collections/04-11-rx8) |
+| The factory 2009 RX-8 fuel-pressure test specification is used only to characterize the RX-8 pump/feed, not as a universal K24 calibration target. | [Operation CHARM](https://charm.li/Mazda/2009/RX8%202RTR-1.3L/Repair%20and%20Diagnosis/Powertrain%20Management/Tune-up%20and%20Engine%20Performance%20Checks/Fuel%20Pressure/Testing%20and%20Inspection/) |
+| KPower's RBB/K20Z intake-side coolant neck is the low-profile coolant-outlet reference for firewall-sensitive mock-up. | [KPower Industries](https://kpower.industries/products/k24a2-upper-coolant-neck-for-nc-mx5) |
+| KPower's RX-8 compatibility guide identifies RX-8-confirmed intake, fuel, header and A/C compatibility context. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| Completed K24RX8 running-build notes document installation/accessory/wiring lessons, including packaging-sensitive plumbing. | [K24RX8](https://k24rx8.com/2019/05/04/k24-gets-a-new-home/) |

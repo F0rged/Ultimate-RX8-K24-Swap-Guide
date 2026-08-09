@@ -104,3 +104,14 @@ Every price in the BOM has a `price_basis` field:
 - `market_snapshot` = a current example, not a universal market price
 - `planning_estimate` = budget allowance, not a sourced quote
 - `tbd_vendor_quote` = get a quote before committing
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| The BOM and planning roll-up provide the page's detailed price basis. | [Repository BOM](../data/bom.csv) |
+| KPower's NC Race package is used as a physical-parts and cost benchmark, not as a complete RX-8 kit. | [KPower Industries](https://kpower.industries/collections/kpower-nc-mx5-swap-parts/products/kpower-nc-mx5-swap-kit-no-electronics) |
+| KPower's complete NC package is used for component architecture and cost context. | [KPower Industries](https://kpower.industries/collections/items-with-lead-times/products/complete-kpower-nc-mx5-swap-package) |
+| Collins' RX-8 collection is used as a current component-price reference for retained-RX-8-driveline parts. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/collections/mazda-rx-8) |
+| Current JDM K24A/RBB market examples inform the engine price snapshot and seller-verification expectations. | [JDM Alliance](https://www.jdm-online.com/products/jdm-04-08-honda-k24a-2-4l-dohc-i-vtec-rbb-200hp-engine-k24a2-acura-tsx-33) |
+| A Canadian JDM K24A/RBB three-lobe listing is used as a market snapshot, not an endorsement. | [Japan Motor Import](https://japanmotorimport.ca/products/jdm-hondaacura-tsx-k24a-k24a2-rbb-3-lobe-engine) |

@@ -72,3 +72,12 @@ Do not road-test until:
 - power assist is predictable
 - front toe is set safely
 - brake lines and steering lines are clear of all moving/hot parts
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| Collins' instructions require rack relocation and reference a Lexus IS250 steering-column joint for its arrangement. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
+| KPower's RX-8 guidance distinguishes standalone EPS and NC hydraulic steering options for its tubular-subframe architecture. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| KPower's NC hydraulic power-steering kit is used as a hydraulic steering architecture reference. | [KPower Industries](https://kpower.industries/products/k-swap-nc-power-steering-kit) |
+| Independent K24 RX-8 fitment notes document rack and steering-clearance issues that make bump-steer checks important. | [K24RX8](https://k24rx8.com/2018/10/23/initial-fitment/) |

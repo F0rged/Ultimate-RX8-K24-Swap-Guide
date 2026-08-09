@@ -40,3 +40,9 @@ Do not advance merely because the next parts have arrived.
 | G6 Controls | Brake/ABS plan, steering assist, gauges, fans, charging and A/C strategy validated |
 | G7 Chassis | Alignment and bump-steer checks completed before normal road use |
 | G8 Tune | Full-load calibration completed on the fuel and hardware actually installed |
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| This page is a build-guide navigation and gate summary; page-specific technical claims are sourced in the individual chapters. | No external source cited. |

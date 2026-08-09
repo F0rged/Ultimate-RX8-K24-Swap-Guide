@@ -116,3 +116,14 @@ Pass only when:
 - coolant-neck choice is installed for mock-up
 - oil-pump/pan choice is at least defined
 - required sensors match the intended harness or adapters are planned
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| JDM K24A/RBB importer listings are used as examples of three-lobe/RBB identity and seller-verification practices. | [Japan Motor Import](https://japanmotorimport.ca/products/jdm-hondaacura-tsx-k24a-k24a2-rbb-3-lobe-engine) |
+| A current US JDM K24A/RBB listing is used as an engine-market and actual-unit verification snapshot. | [JDM Alliance](https://www.jdm-online.com/products/jdm-04-08-honda-k24a-2-4l-dohc-i-vtec-rbb-200hp-engine-k24a2-acura-tsx-33) |
+| KPower documents JDM K24A/RBB accessory-drive differences and recommends a USDM-style water-pump housing conversion. | [KPower Industries](https://kpower.industries/products/usdm-k24a-water-pump-housing) |
+| KPower's RBB/K20Z intake-side coolant neck is used as the RX-8-relevant low-profile coolant-outlet reference. | [KPower Industries](https://kpower.industries/products/k24a2-upper-coolant-neck-for-nc-mx5) |
+| KPower's RX-8 guidance recognizes JDM K24A/RBB support, Unit2 pan options and general K24A swap hardware compatibility. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| Completed K24RX8 build notes document coolant-outlet and oil-pump choices in a custom architecture. | [K24RX8](https://k24rx8.com/2019/04/08/some-assembly-required/) |
