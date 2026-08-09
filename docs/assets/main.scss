@@ -367,15 +367,40 @@ body {
 }
 
 .build-config-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.85rem;
+  display: grid;
+  gap: 0.65rem;
   margin: -0.7rem 0 1rem;
   padding: 0.75rem 0.85rem;
   border: 1px solid var(--guide-border);
   border-radius: 6px;
   background: var(--guide-panel);
+}
+
+.build-config-bar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+}
+
+.build-config-bar__body {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.build-config-bar__help,
+.build-config-bar__collapsed-help {
+  margin: 0;
+  color: var(--guide-muted);
+  font-size: 0.88rem;
+}
+
+.build-config-bar__collapsed-help {
+  display: none;
+}
+
+.build-config-bar--collapsed .build-config-bar__collapsed-help {
+  display: block;
 }
 
 .build-config-bar__summary {
@@ -570,6 +595,14 @@ body {
   margin: 0.2rem 0 0;
 }
 
+.build-config-alert__status {
+  color: var(--guide-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .build-config-alert__sources {
   font-size: 0.78rem;
 }
@@ -629,7 +662,7 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .build-config-bar {
+  .build-config-bar__header {
     align-items: stretch;
     flex-direction: column;
   }

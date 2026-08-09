@@ -31,6 +31,10 @@
   let config = loadInitialConfig();
   let draft = Core.clone(config);
 
+  function guidanceEnabled(current) {
+    return ((current && current.ui && current.ui.alerts) || "relevant") !== "none";
+  }
+
   function loadSaved() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -120,18 +124,28 @@
   }
 
   function renderSummary() {
+    const enabled = guidanceEnabled(config);
+    const panel = document.getElementById("build-config-panel");
+    if (panel) panel.classList.toggle("build-config-bar--collapsed", !enabled);
+
+    const body = document.getElementById("build-config-panel-body");
+    if (body) body.hidden = !enabled;
+
     const node = document.getElementById("build-config-summary");
     if (node) node.textContent = buildSummary(config);
 
     config.ui.mode = "context";
 
     const guidance = document.getElementById("build-config-guidance");
-    if (guidance) guidance.checked = (config.ui.alerts || "relevant") !== "none";
+    if (guidance) {
+      guidance.checked = enabled;
+      guidance.setAttribute("aria-expanded", enabled ? "true" : "false");
+    }
 
     const issueCount = document.getElementById("build-config-issue-count");
     if (issueCount) {
       const count = Core.pageAlertRules(config, rules, pageTopics, config.ui.alerts).length;
-      issueCount.hidden = count === 0;
+      issueCount.hidden = !enabled || count === 0;
       issueCount.textContent = count === 1
         ? "1 page guidance item"
         : count + " page guidance items";
@@ -237,8 +251,13 @@
       panel.className = "build-config-alert build-config-alert--" + (rule.severity || "info");
 
       const heading = document.createElement("strong");
-      heading.textContent = ruleStatusLabel(rule);
+      heading.textContent = "For your build";
       panel.appendChild(heading);
+
+      const status = document.createElement("p");
+      status.className = "build-config-alert__status";
+      status.textContent = ruleStatusLabel(rule);
+      panel.appendChild(status);
 
       const message = document.createElement("p");
       message.textContent = rule.message;
@@ -309,9 +328,18 @@
 
   function applyVariantFiltering() {
     const mode = "context";
+    const enabled = guidanceEnabled(config);
 
     document.querySelectorAll(".variant-note[data-when]").forEach(function (block) {
       prepareVariantBlock(block);
+
+      if (!enabled) {
+        block.hidden = true;
+        block.dataset.filterState = "disabled";
+        block.classList.remove("variant-note--collapsed", "variant-note--safety");
+        setCollapsed(block, false);
+        return;
+      }
 
       const display = Core.variantDisplayState(
         config,
