@@ -20,6 +20,7 @@ Do not ask an AI agent to bypass branch protection, push directly to `main`, app
 - Prefer manufacturer, vendor, service manual and completed-build evidence.
 - Do not turn forum consensus into a hard instruction unless it is labeled and cross-checked.
 - Preserve the chapter-by-chapter build flow.
+- Preserve build-guide chapter navigation: every chapter page in `docs/build-guide/` must show top navigation directly below the breadcrumb with `Last Chapter {chapter name}` and `Next Chapter {chapter name}` links when adjacent chapters exist. Keep the chapter order in `docs/_data/build_chapters.yml` current when adding, removing or renaming chapters.
 - Update `docs/reference/sources.md` when adding a human-readable source.
 - Update `docs/data/sources.csv` when adding a cataloged source.
 - Update `docs/data/research-matrix.csv` when changing a major technical claim.

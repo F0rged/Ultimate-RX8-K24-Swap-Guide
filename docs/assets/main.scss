@@ -194,6 +194,59 @@ body {
   text-decoration: underline;
 }
 
+.build-chapter-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 0.2rem 0 0;
+}
+
+.build-chapter-nav-link,
+.build-chapter-nav-link:visited {
+  min-width: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  color: var(--guide-ink);
+  background: var(--guide-panel);
+  text-decoration: none;
+}
+
+.build-chapter-nav-link:hover {
+  border-color: var(--guide-accent);
+  color: var(--guide-ink);
+  text-decoration: none;
+}
+
+.build-chapter-nav-link span,
+.build-chapter-nav-link strong {
+  display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.build-chapter-nav-link span {
+  color: var(--guide-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.build-chapter-nav-link strong {
+  margin-top: 0.16rem;
+  font-size: 0.88rem;
+  line-height: 1.24;
+}
+
+.build-chapter-nav-link-next {
+  text-align: right;
+}
+
+.build-chapter-nav-link-next:first-child {
+  grid-column: 2;
+}
+
 .guide-page-heading .post-title {
   margin: 0;
   color: var(--guide-ink);
@@ -256,6 +309,14 @@ body {
     padding: 0.85rem;
   }
   .guide-breadcrumbs ol { gap: 0.4rem; }
+  .build-chapter-nav {
+    grid-template-columns: 1fr;
+  }
+  .build-chapter-nav-link-next,
+  .build-chapter-nav-link-next:first-child {
+    grid-column: auto;
+    text-align: left;
+  }
   .guide-page-heading .post-title { font-size: 1.25rem; }
   .area-grid { grid-template-columns: 1fr; }
 }
