@@ -388,19 +388,10 @@ body {
   gap: 0.55rem;
 }
 
-.build-config-bar__help,
-.build-config-bar__collapsed-help {
+.build-config-bar__help {
   margin: 0;
   color: var(--guide-muted);
   font-size: 0.88rem;
-}
-
-.build-config-bar__collapsed-help {
-  display: none;
-}
-
-.build-config-bar--collapsed .build-config-bar__collapsed-help {
-  display: block;
 }
 
 .build-config-bar__summary {
@@ -461,22 +452,17 @@ body {
   font-size: 0.8rem;
 }
 
-.build-config-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  min-height: 34px;
-  padding: 0.38rem 0.55rem;
-  border: 1px solid var(--guide-border);
-  border-radius: 6px;
-  background: #fff;
+.build-config-toggle-label {
   color: var(--guide-ink);
-  font-size: 0.88rem;
-  cursor: pointer;
+  font-weight: 700;
 }
 
-.build-config-toggle input {
+.build-config-toggle {
+  width: 18px;
+  height: 18px;
   margin: 0;
+  flex: 0 0 auto;
+  cursor: pointer;
 }
 
 .build-config-dialog {
