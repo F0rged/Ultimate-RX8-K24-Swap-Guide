@@ -1,17 +1,27 @@
-<section class="build-config-bar" aria-label="Build configuration">
-  <div class="build-config-bar__summary">
+<section class="build-config-bar" id="build-config-panel" aria-label="Build configuration">
+  <div class="build-config-bar__header">
     <strong>Your Build</strong>
-    <span id="build-config-summary">Build not configured - page guidance is not tailored yet.</span>
-  </div>
-  <div class="build-config-bar__actions">
-    <button type="button" class="build-config-button" id="build-config-edit">Configure build</button>
-    <button type="button" class="build-config-button" id="build-config-share">Copy build link</button>
     <label class="build-config-toggle" for="build-config-guidance">
-      <input type="checkbox" id="build-config-guidance" checked>
-      <span>Build Guidance</span>
+      <input type="checkbox" id="build-config-guidance" aria-controls="build-config-panel-body build-config-alerts" checked>
+      <span>Show build-specific guidance</span>
     </label>
   </div>
-  <span id="build-config-issue-count" class="build-config-issue-count" hidden></span>
+  <p class="build-config-bar__collapsed-help">
+    Customize recommendations and warnings throughout the guide.
+  </p>
+  <div class="build-config-bar__body" id="build-config-panel-body">
+    <p class="build-config-bar__help">
+      Configure your build below. The guide will use these choices to show additional recommendations, compatibility notes, and warnings relevant to your setup.
+    </p>
+    <div class="build-config-bar__summary">
+      <span id="build-config-summary">Build not configured - page guidance is not tailored yet.</span>
+    </div>
+    <div class="build-config-bar__actions">
+      <button type="button" class="build-config-button" id="build-config-edit">Configure build</button>
+      <button type="button" class="build-config-button" id="build-config-share">Copy build link</button>
+    </div>
+    <span id="build-config-issue-count" class="build-config-issue-count" hidden></span>
+  </div>
 </section>
 
 <div id="build-config-alerts" class="build-config-alerts" aria-live="polite"></div>
