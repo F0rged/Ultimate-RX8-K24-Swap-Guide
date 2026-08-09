@@ -121,6 +121,8 @@ Do not assume that an RX-8 gearbox's Mazda family relationship to NC means bellh
 
 **Gate:** before buying a used NC gearbox for an RX-8, define exactly how the selected gearbox will connect to the PPF and driveshaft.
 
+For detailed KPower component compatibility, steering options, oil-pan choices, and the unresolved rear-driveline interfaces, see the [KPower / NC-derived architecture reference]({{ '/reference/kpower-nc-architecture/' | relative_url }}).
+
 ---
 
 ## Do not build an undocumented hybrid by accident

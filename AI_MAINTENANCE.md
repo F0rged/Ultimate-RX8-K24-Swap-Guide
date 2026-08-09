@@ -42,6 +42,6 @@ Do not ask an AI agent to bypass branch protection, push directly to `main`, app
 - Every affected page has an accurate bottom `## Sources` table.
 - New parts recommendations include compatibility limits.
 - Prices and vendor claims include a checked date.
-- Open questions move to `docs/build-guide/13-open-questions.md` instead of being hidden in prose.
+- Open questions move to `docs/reference/open-questions.md` instead of being hidden in prose.
 - Any irreversible fabrication instruction has a measurement or validation step before cutting, drilling or welding.
 - Any workflow, layout, include or config change has been reviewed as a security-sensitive change.
