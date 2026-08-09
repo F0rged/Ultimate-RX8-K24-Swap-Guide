@@ -5,7 +5,7 @@ title: "02 — BOM, budget and buy order"
 
 # 02 — BOM, budget and buy order
 
-The full machine-readable BOM is in [`data/bom.csv`](data/bom.csv).
+The full machine-readable BOM is in [`../data/bom.csv`](../data/bom.csv).
 
 ## Budget reality
 
