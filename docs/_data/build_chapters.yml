@@ -1,0 +1,80 @@
+- title: "00 - Scope and safety"
+  url: /build-guide/00-scope-and-safety.html
+  next_title: "01 - Choose the architecture"
+  next_url: /build-guide/01-architecture.html
+- title: "01 - Choose the architecture"
+  url: /build-guide/01-architecture.html
+  last_title: "00 - Scope and safety"
+  last_url: /build-guide/00-scope-and-safety.html
+  next_title: "02 - BOM, budget and buy order"
+  next_url: /build-guide/02-bom-budget.html
+- title: "02 - BOM, budget and buy order"
+  url: /build-guide/02-bom-budget.html
+  last_title: "01 - Choose the architecture"
+  last_url: /build-guide/01-architecture.html
+  next_title: "03 - JDM K24A/RBB engine preparation"
+  next_url: /build-guide/03-jdm-k24a-engine-prep.html
+- title: "03 - JDM K24A/RBB engine preparation"
+  url: /build-guide/03-jdm-k24a-engine-prep.html
+  last_title: "02 - BOM, budget and buy order"
+  last_url: /build-guide/02-bom-budget.html
+  next_title: "04 - RX-8 baseline and disassembly"
+  next_url: /build-guide/04-rx8-disassembly.html
+- title: "04 - RX-8 baseline and disassembly"
+  url: /build-guide/04-rx8-disassembly.html
+  last_title: "03 - JDM K24A/RBB engine preparation"
+  last_url: /build-guide/03-jdm-k24a-engine-prep.html
+  next_title: "05 - Fitment and fabrication"
+  next_url: /build-guide/05-fitment-fabrication.html
+- title: "05 - Fitment and fabrication"
+  url: /build-guide/05-fitment-fabrication.html
+  last_title: "04 - RX-8 baseline and disassembly"
+  last_url: /build-guide/04-rx8-disassembly.html
+  next_title: "06 - Transmission, clutch and driveline"
+  next_url: /build-guide/06-transmission-driveline.html
+- title: "06 - Transmission, clutch and driveline"
+  url: /build-guide/06-transmission-driveline.html
+  last_title: "05 - Fitment and fabrication"
+  last_url: /build-guide/05-fitment-fabrication.html
+  next_title: "07 - Steering and suspension"
+  next_url: /build-guide/07-steering-suspension.html
+- title: "07 - Steering and suspension"
+  url: /build-guide/07-steering-suspension.html
+  last_title: "06 - Transmission, clutch and driveline"
+  last_url: /build-guide/06-transmission-driveline.html
+  next_title: "08 - Cooling, fuel, intake and exhaust"
+  next_url: /build-guide/08-cooling-fuel-intake-exhaust.html
+- title: "08 - Cooling, fuel, intake and exhaust"
+  url: /build-guide/08-cooling-fuel-intake-exhaust.html
+  last_title: "07 - Steering and suspension"
+  last_url: /build-guide/07-steering-suspension.html
+  next_title: "09 - Electrical, ECU and S2 CAN"
+  next_url: /build-guide/09-electrical-ecu-can-s2.html
+- title: "09 - Electrical, ECU and S2 CAN"
+  url: /build-guide/09-electrical-ecu-can-s2.html
+  last_title: "08 - Cooling, fuel, intake and exhaust"
+  last_url: /build-guide/08-cooling-fuel-intake-exhaust.html
+  next_title: "10 - First start and commissioning"
+  next_url: /build-guide/10-first-start-commissioning.html
+- title: "10 - First start and commissioning"
+  url: /build-guide/10-first-start-commissioning.html
+  last_title: "09 - Electrical, ECU and S2 CAN"
+  last_url: /build-guide/09-electrical-ecu-can-s2.html
+  next_title: "11 - Shakedown and validation"
+  next_url: /build-guide/11-shakedown-validation.html
+- title: "11 - Shakedown and validation"
+  url: /build-guide/11-shakedown-validation.html
+  last_title: "10 - First start and commissioning"
+  last_url: /build-guide/10-first-start-commissioning.html
+  next_title: "12 - KPower / NC alternative"
+  next_url: /build-guide/12-kpower-alternative.html
+- title: "12 - KPower / NC alternative"
+  url: /build-guide/12-kpower-alternative.html
+  last_title: "11 - Shakedown and validation"
+  last_url: /build-guide/11-shakedown-validation.html
+  next_title: "13 - Open questions / validation register"
+  next_url: /build-guide/13-open-questions.html
+- title: "13 - Open questions / validation register"
+  url: /build-guide/13-open-questions.html
+  last_title: "12 - KPower / NC alternative"
+  last_url: /build-guide/12-kpower-alternative.html
