@@ -26,12 +26,14 @@ body {
   display: flex;
   justify-content: center;
   background: #000;
+  padding: 0;
 }
 
 .site-masthead-image {
   display: block;
-  width: 100%;
-  height: clamp(120px, 18vw, 220px);
+  width: 60%;
+  max-width: 1229px;
+  height: clamp(72px, 10.8vw, 132px);
   object-fit: contain;
   background: #000;
 }
@@ -39,34 +41,77 @@ body {
 .site-header .wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  justify-content: flex-start;
+  max-width: none;
+  padding: 0.35rem 1rem;
 }
 
-.site-title,
-.site-title:visited {
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0;
+.masthead-menu {
+  position: relative;
+  line-height: 1;
 }
 
-.site-nav {
-  position: static;
-  float: none;
-  flex: 1 1 auto;
-  border: 0;
-  background: transparent;
-  line-height: 1.4;
-  text-align: right;
+.masthead-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 34px;
+  margin: 0;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  list-style: none;
 }
 
-.site-nav .page-link {
-  margin: 0 0 0 0.85rem;
-  font-size: 0.92rem;
-  line-height: 1.35;
+.masthead-menu-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.masthead-menu-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 15px;
+}
+
+.masthead-menu-icon svg {
+  display: block;
+  fill: var(--guide-ink);
+}
+
+.masthead-menu-panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  z-index: 10;
+  min-width: 230px;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(23, 27, 34, 0.16);
+}
+
+.masthead-menu-link {
+  display: block;
+  margin: 0;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid var(--guide-border);
+  color: var(--guide-ink);
+  font-size: 0.94rem;
+  line-height: 1.25;
+}
+
+.masthead-menu-link:last-child {
+  border-bottom: 0;
+}
+
+.masthead-menu-link:hover {
+  color: var(--guide-accent);
+  text-decoration: none;
+  background: var(--guide-panel);
 }
 
 .rx8-guide-page {
@@ -158,20 +203,11 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .site-header .wrapper {
-    display: block;
-    padding-top: 0.65rem;
-    padding-bottom: 0.65rem;
+  .site-masthead-image {
+    width: 72%;
+    height: 72px;
   }
-  .site-masthead-image { height: 120px; }
-  .site-nav {
-    margin-top: 0.35rem;
-    line-height: 1.5;
-  }
-  .site-nav .page-link {
-    margin: 0 0.7rem 0 0;
-    font-size: 0.88rem;
-  }
+  .masthead-menu-panel { min-width: 220px; }
   .guide-header-content {
     gap: 0.55rem;
     padding: 0.85rem;
