@@ -9,13 +9,13 @@ The full machine-readable BOM is in [`../data/bom.csv`](../data/bom.csv).
 
 ## Budget reality
 
-For a **well-finished 2009 S2 + JDM K24A** using the retained-S2-transmission reference path, a realistic planning range is:
+For a **well-finished older-K-series RX-8** using a documented retained-manual-transmission path, a realistic planning range is:
 
 - **USD 12k–15k:** disciplined DIY, substantial fabrication done personally, economical ECU/instrument choices, no A/C restoration, used/reused parts where sensible.
-- **USD 17k–21k:** the practical reference budget for a reliable NA car with current commercial swap parts, standalone DBW ECU, proper instrumentation, cooling, exhaust, alignment and tuning.
+- **USD 17k-21k:** the practical worked-example budget for a reliable NA car with current commercial swap parts, standalone engine management, proper instrumentation, cooling, exhaust, alignment and tuning.
 - **USD 20k–25k+:** professional fabrication, new premium components, restored A/C, extensive OEM-like electronics integration, or replacing many used subsystems.
 
-These figures exclude the RX-8 chassis itself and assume the K24 long block does not require a rebuild.
+These figures exclude the RX-8 chassis itself and assume the selected K-series long block does not require a rebuild.
 
 The current additive **typical-value roll-up** of required/recommended reference-path BOM rows is approximately **$20.5k USD**. Treat that as a planning check rather than a quote: several rows are allowances and real builds will substitute, reuse or omit components.
 
@@ -28,7 +28,7 @@ Buy only:
 
 - engine
 - adapter/flywheel/mount system for the selected path
-- selected transmission (if not retaining S2)
+- selected transmission and whether the chassis is already manual
 - steering architecture parts
 - oil-pan/pump parts needed to establish bottom clearance
 - low-profile / intake-side coolant outlet
@@ -50,7 +50,7 @@ After the first dry-fit:
 After mechanical position is locked:
 
 - ECU/harness
-- DBW throttle and pedal strategy
+- cable-throttle or DBW throttle and pedal strategy
 - fuel rail/regulator/lines as required
 - cooling system
 - sensors
@@ -72,7 +72,7 @@ After first start:
 
 | System | Reference choice | Typical 2026 planning figure |
 |---|---|---:|
-| Engine | JDM K24A RBB | $1,200–1,900 |
+| Engine | Worked example: JDM K24A RBB | $1,200-1,900 |
 | JDM accessory conversion + engine service | USDM-style K24A water-pump housing, pump, alternator/idler + seals/consumables | $700–1,500 |
 | K→RX-8 adapter | Collins | ~$650 |
 | Flywheel | Collins K→RX-8 | ~$861 |
@@ -83,7 +83,7 @@ After first start:
 | Header | RX-8-confirmed KPower 4-2-1 | ~$939 |
 | Engine management | Universal KPower/Haltech DBW package | from ~$4,195 |
 | Standalone dash (recommended S2 baseline) | Haltech iC-7 or equivalent | ~$1,195 |
-| S2 radiator | Koyo 2009–11 example | ~$433 |
+| Radiator | Year-specific RX-8 radiator example | ~$433 |
 | Fabrication / exhaust / hoses / heat / misc. | highly build-specific | $2,000–5,000 |
 | Tune + alignment | local service | $700–1,500 |
 
@@ -93,7 +93,7 @@ Do not double-count these:
 
 - **K24 balance-shaft oil pump + compatible baffled pan** **OR** K20 oil-pump conversion + compatible pan.
 - **Factory/converted RX-8 EPS integration** **OR** standalone EPS **OR** NC hydraulic rack/pump architecture.
-- **Standalone dash** **OR** a verified S2 CAN-emulator/OEM-cluster solution.
+- **Standalone dash** **OR** a verified RX-8-series-specific CAN-emulator/OEM-cluster solution.
 - **Collins stock-RX-8-transmission architecture** **OR** KPower/NC-trans architecture.
 
 ## Price discipline

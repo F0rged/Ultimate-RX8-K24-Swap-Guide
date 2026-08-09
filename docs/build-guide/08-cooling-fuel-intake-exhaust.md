@@ -9,11 +9,11 @@ Finish these systems **after** engine position is locked.
 
 ## 8.1 Cooling
 
-### S2 radiator
-KPower's RX-8 catalog currently lists a Koyo radiator specifically for **2009–2011 RX-8**. A healthy OEM radiator can also be used if capacity/condition are adequate; the point is to buy the S2-specific geometry, not an S1 radiator by mistake.
+### Radiator by RX-8 year
+KPower's RX-8 catalog currently distinguishes RX-8 radiator applications, including separate 2004-2008 and 2009-2011 listings. A healthy OEM radiator can also be used if capacity/condition are adequate; the point is to buy the geometry for the actual RX-8, not a different series by mistake.
 
 ### Upper outlet
-For a JDM K24A/RBB, use the chosen intake-side/low-profile coolant neck. It must already have been used during firewall mock-up.
+For a K24A/RBB or K20Z/RBC head, use the chosen intake-side/low-profile coolant neck. PRB and R40 heads need their own head-family-specific coolant/intake plan. The final parts must already have been used during firewall mock-up.
 
 ### Heater
 Decide before final hose routing:
@@ -30,9 +30,9 @@ The longitudinal conversion can create new high points. Build in a deliberate fi
 
 The 2009 Mazda service information specifies factory RX-8 fuel-line pressure of approximately **375–450 kPa (54.4–65.2 psi)** during its factory test.
 
-That number is useful to evaluate the **RX-8 pump/feed**, but it is not automatically the correct base pressure for the new K24 calibration.
+That number is useful to evaluate the **RX-8 pump/feed**, but it is not automatically the correct base pressure for the new K-series calibration.
 
-For a standalone K24:
+For a standalone K-series ECU:
 
 1. select injector(s);
 2. choose returnless or regulated-return architecture;
@@ -53,7 +53,7 @@ A KPower RWD fuel rail supports a clean custom solution. External adjustable reg
 
 ## 8.3 Intake
 
-A clean RWD DBW baseline is:
+A clean RWD DBW branch is:
 
 - KPower cast RWD intake manifold
 - Bosch 74 mm DBW throttle body
@@ -100,8 +100,8 @@ Before first start:
 
 | Claim | Source |
 | --- | --- |
-| KPower's RX-8 catalog lists RX-8-specific cooling, intake, electronics and exhaust-related components, including S2 radiator context. | [KPower Industries](https://kpower.industries/collections/04-11-rx8) |
-| The factory 2009 RX-8 fuel-pressure test specification is used only to characterize the RX-8 pump/feed, not as a universal K24 calibration target. | [Operation CHARM](https://charm.li/Mazda/2009/RX8%202RTR-1.3L/Repair%20and%20Diagnosis/Powertrain%20Management/Tune-up%20and%20Engine%20Performance%20Checks/Fuel%20Pressure/Testing%20and%20Inspection/) |
+| KPower's RX-8 catalog lists RX-8-specific cooling, intake, electronics and exhaust-related components, including separate 2004-2008 and 2009-2011 radiator context. | [KPower Industries](https://kpower.industries/collections/rx8-k-swap-components) |
+| The factory 2004 and 2009 RX-8 fuel-pressure specifications are used only to characterize the RX-8 pump/feed, not as universal K-series calibration targets. | [Operation CHARM 2004](https://charm.li/Mazda/2004/RX8%202RTR-1.3L/Repair%20and%20Diagnosis/Powertrain%20Management/Fuel%20Delivery%20and%20Air%20Induction/Fuel%20Pump/Specifications/) and [Operation CHARM 2009](https://charm.li/Mazda/2009/RX8%202RTR-1.3L/Repair%20and%20Diagnosis/Powertrain%20Management/Tune-up%20and%20Engine%20Performance%20Checks/Fuel%20Pressure/Testing%20and%20Inspection/) |
 | KPower's RBB/K20Z intake-side coolant neck is the low-profile coolant-outlet reference for firewall-sensitive mock-up. | [KPower Industries](https://kpower.industries/products/k24a2-upper-coolant-neck-for-nc-mx5) |
 | KPower's RX-8 compatibility guide identifies RX-8-confirmed intake, fuel, header and A/C compatibility context. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
 | Completed K24RX8 running-build notes document installation/accessory/wiring lessons, including packaging-sensitive plumbing. | [K24RX8](https://k24rx8.com/2019/05/04/k24-gets-a-new-home/) |

@@ -6,7 +6,7 @@ permalink: /reference/k-series-engine-head-combinations/
 
 # K-series engine and head/block selection
 
-The reference build uses a verified JDM K24A/RBB or USDM 2004-2008 TSX K24A2-style long block. That remains the best-supported default for this guide, but other K20/K24 engines can materially change RX-8 fitment.
+A verified JDM K24A/RBB or USDM 2004-2008 TSX K24A2-style long block remains the best-documented worked example for this guide, but other K20/K24 engines can materially change RX-8 fitment.
 
 Do not treat "K20 head" or "K24 block" as enough detail. For an RX-8, the useful description names the block, head family, coolant neck, oil pump/pan, mount path and transmission path.
 
@@ -25,7 +25,7 @@ There is no universal RX-8 K-series firewall dimension. Firewall and cowl work d
 
 | Engine or combination | Head family | Packaging effect | Current guide position |
 | --- | --- | --- | --- |
-| K24A2 / JDM K24A RBB | RBB | Tall K24 block; later RBB/RBC rear coolant-outlet family; broad RX-8/RWD support. | Reference/default after identity check. |
+| K24A2 / JDM K24A RBB | RBB | Tall K24 block; later RBB/RBC rear coolant-outlet family; broad RX-8/RWD support. | Best-documented worked example after identity check. |
 | K24A2-style block + K20A2/K20Z1 head | PRB | Keeps K24 height but changes the coolant-head architecture; directly documented in one RX-8 build. | Useful advanced hybrid when the builder verifies all hybrid details. |
 | K20Z3 | RBC | Lower K20 deck with later RBB/RBC coolant-neck architecture; supported by current KPower mount family. | Promising full-K20 option, but less RX-8 build-log evidence than the RBB K24 path. |
 | K20A2 / K20Z1 | PRB | Lower K20 deck plus PRB coolant architecture; not supported by current KPower mount family. | Strong Collins-path option if the chosen mounts explicitly support the block. |

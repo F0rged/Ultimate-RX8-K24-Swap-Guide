@@ -34,9 +34,9 @@ After the car is complete:
 
 A static alignment does not prove correct steering geometry after moving the rack.
 
-## 7.2 Power steering on a 2009 S2
+## 7.2 Power steering by RX-8 variant
 
-The S2's factory electric steering is part of the networked vehicle. KPower's current RX-8 guidance offers two routes that avoid making factory CAN operation a prerequisite:
+The RX-8's factory electric steering is part of the networked vehicle, and S1/S2 integration details should not be assumed identical. KPower's current RX-8 guidance offers two routes that avoid making factory CAN operation a prerequisite:
 
 ### Standalone EPS
 KPower offers a standalone electric-power-steering solution for RX-8 applications. This is attractive if retaining electric assist without solving S2 factory CAN is the priority.
