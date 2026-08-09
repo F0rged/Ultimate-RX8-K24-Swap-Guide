@@ -1,0 +1,8 @@
+- title: Build Guide
+  url: /build-guide/
+  kicker: Sequential
+  description: A chapter-based path through the swap, written as the prescriptive sequence to follow.
+- title: Reference Material
+  url: /reference/
+  kicker: Deep dives
+  description: Source notes, procedures, evidence, and topic-specific details that support the build guide.

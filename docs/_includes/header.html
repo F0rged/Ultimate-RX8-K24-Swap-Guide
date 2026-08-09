@@ -21,6 +21,9 @@
 
       <div class="masthead-menu-panel">
         <a class="masthead-menu-link" href="{{ '/' | relative_url }}">Home</a>
+        {% for area in site.data.site_areas %}
+          <a class="masthead-menu-link" href="{{ area.url | relative_url }}">{{ area.title }}</a>
+        {% endfor %}
         <a class="masthead-menu-link" href="{{ '/about.html' | relative_url }}">About this site</a>
         <a class="masthead-menu-link" href="{{ '/contribute.html' | relative_url }}">How to contribute to this site</a>
       </div>

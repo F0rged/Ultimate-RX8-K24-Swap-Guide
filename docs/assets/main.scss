@@ -202,6 +202,49 @@ body {
   letter-spacing: 0;
 }
 
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.area-card,
+.area-card:visited {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-height: 9rem;
+  padding: 1rem;
+  border: 1px solid var(--guide-border);
+  border-radius: 8px;
+  color: var(--guide-ink);
+  background: #fff;
+  text-decoration: none;
+}
+
+.area-card:hover {
+  border-color: var(--guide-accent);
+  text-decoration: none;
+}
+
+.area-card-kicker {
+  color: var(--guide-accent);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.area-card strong {
+  font-size: 1.18rem;
+}
+
+.area-card span:last-child {
+  color: var(--guide-muted);
+  font-size: 0.95rem;
+}
+
 @media screen and (max-width: 600px) {
   .site-masthead-image {
     width: 72%;
@@ -214,6 +257,7 @@ body {
   }
   .guide-breadcrumbs ol { gap: 0.4rem; }
   .guide-page-heading .post-title { font-size: 1.25rem; }
+  .area-grid { grid-template-columns: 1fr; }
 }
 
 .post-content h2 {

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Research references
+permalink: /reference/sources/
 ---
 
 # Research references

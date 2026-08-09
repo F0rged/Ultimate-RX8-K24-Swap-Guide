@@ -17,21 +17,8 @@ For the **2009 S2 + JDM K24A reference build**, this guide uses the **Collins / 
 
 ## Repository contents
 
-- `docs/00-scope-and-safety.md` - scope, assumptions, irreversible-work warnings
-- `docs/01-architecture.md` - choose the mechanical architecture before ordering
-- `docs/02-bom-budget.md` - budget, core BOM, buy-order
-- `docs/03-jdm-k24a-engine-prep.md` - JDM K24A/RBB identification and preparation
-- `docs/04-rx8-disassembly.md` - donor baseline and teardown sequence
-- `docs/05-fitment-fabrication.md` - firewall, crossmember/subframe, ABS and clearance work
-- `docs/06-transmission-driveline.md` - clutch, adapter, S2 transmission, PPF
-- `docs/07-steering-suspension.md` - rack choices, steering shaft and geometry
-- `docs/08-cooling-fuel-intake-exhaust.md` - plumbing and supporting systems
-- `docs/09-electrical-ecu-can-s2.md` - ECU, S2 CAN, EPS, cluster and A/C strategy
-- `docs/10-first-start-commissioning.md` - pre-oil, pressure checks and first start
-- `docs/11-shakedown-validation.md` - alignment, bump steer, thermal and road validation
-- `docs/12-kpower-alternative.md` - KPower/NC front-end architecture
-- `docs/13-open-questions.md` - items that still need vehicle-specific/vendor validation
-- `docs/references.md` - annotated source list
+- `docs/build-guide/` - sequential, prescriptive chapter-based build guide
+- `docs/reference/` - source notes, deep dives and supporting material
 - `docs/data/bom.csv` - machine-readable BOM
 - `docs/data/research-matrix.csv` - major claims, evidence and confidence
 - `docs/data/sources.csv` - source catalog
