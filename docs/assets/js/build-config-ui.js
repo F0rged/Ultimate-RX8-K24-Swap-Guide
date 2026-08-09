@@ -79,7 +79,7 @@
 
   function buildSummary(current) {
     if (Core.selectedValueCount(current) === 0) {
-      return "Build not configured - variant guidance is not being filtered.";
+      return "Build not configured - page guidance is not tailored yet.";
     }
 
     const parts = [];
@@ -123,19 +123,18 @@
     const node = document.getElementById("build-config-summary");
     if (node) node.textContent = buildSummary(config);
 
-    const mode = document.getElementById("build-config-mode");
-    if (mode) mode.value = config.ui.mode || "context";
+    config.ui.mode = "context";
 
-    const alertMode = document.getElementById("build-config-alert-mode");
-    if (alertMode) alertMode.value = config.ui.alerts || "relevant";
+    const guidance = document.getElementById("build-config-guidance");
+    if (guidance) guidance.checked = (config.ui.alerts || "relevant") !== "none";
 
     const issueCount = document.getElementById("build-config-issue-count");
     if (issueCount) {
-      const count = Core.issueCount(config, rules, config.ui.alerts);
+      const count = Core.pageAlertRules(config, rules, pageTopics, config.ui.alerts).length;
       issueCount.hidden = count === 0;
       issueCount.textContent = count === 1
-        ? "1 build compatibility issue"
-        : count + " build compatibility issues";
+        ? "1 page guidance item"
+        : count + " page guidance items";
     }
 
     const edit = document.getElementById("build-config-edit");
@@ -216,11 +215,11 @@
 
   function ruleStatusLabel(rule) {
     const labels = {
-      documented: "Documented",
-      partial: "Partially documented",
+      documented: "Recommended",
+      partial: "Warning",
       incompatible: "Compatibility conflict",
-      unvalidated: "Unvalidated",
-      info: "Note"
+      unvalidated: "Warning",
+      info: "Recommended"
     };
     return labels[rule.status] || rule.status || "Note";
   }
@@ -309,7 +308,7 @@
   }
 
   function applyVariantFiltering() {
-    const mode = config.ui.mode || "context";
+    const mode = "context";
 
     document.querySelectorAll(".variant-note[data-when]").forEach(function (block) {
       prepareVariantBlock(block);
@@ -375,8 +374,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     const edit = document.getElementById("build-config-edit");
     const share = document.getElementById("build-config-share");
-    const mode = document.getElementById("build-config-mode");
-    const alertMode = document.getElementById("build-config-alert-mode");
+    const guidance = document.getElementById("build-config-guidance");
     const form = document.getElementById("build-config-form");
     const clear = document.getElementById("build-config-clear");
     const cancel = document.getElementById("build-config-cancel");
@@ -385,17 +383,10 @@
     if (edit) edit.addEventListener("click", openDialog);
     if (share) share.addEventListener("click", shareBuild);
 
-    if (mode) {
-      mode.addEventListener("change", function () {
-        config.ui.mode = mode.value;
-        saveConfig(config);
-        render();
-      });
-    }
-
-    if (alertMode) {
-      alertMode.addEventListener("change", function () {
-        config.ui.alerts = alertMode.value;
+    if (guidance) {
+      guidance.addEventListener("change", function () {
+        config.ui.alerts = guidance.checked ? "relevant" : "none";
+        config.ui.mode = "context";
         saveConfig(config);
         render();
       });

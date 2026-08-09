@@ -1,22 +1,15 @@
 <section class="build-config-bar" aria-label="Build configuration">
   <div class="build-config-bar__summary">
-    <strong>Your build</strong>
-    <span id="build-config-summary">Build not configured - variant guidance is not being filtered.</span>
+    <strong>Your Build</strong>
+    <span id="build-config-summary">Build not configured - page guidance is not tailored yet.</span>
   </div>
   <div class="build-config-bar__actions">
     <button type="button" class="build-config-button" id="build-config-edit">Configure build</button>
     <button type="button" class="build-config-button" id="build-config-share">Copy build link</button>
-    <label class="build-config-mode-label" for="build-config-mode">View</label>
-    <select id="build-config-mode" class="build-config-mode">
-      <option value="context">My build + alternatives</option>
-      <option value="mine">My build only</option>
-      <option value="all">Show all variants</option>
-    </select>
-    <label class="build-config-mode-label" for="build-config-alert-mode">Build alerts</label>
-    <select id="build-config-alert-mode" class="build-config-mode">
-      <option value="relevant">Relevant</option>
-      <option value="none">None</option>
-    </select>
+    <label class="build-config-toggle" for="build-config-guidance">
+      <input type="checkbox" id="build-config-guidance" checked>
+      <span>Build Guidance</span>
+    </label>
   </div>
   <span id="build-config-issue-count" class="build-config-issue-count" hidden></span>
 </section>
