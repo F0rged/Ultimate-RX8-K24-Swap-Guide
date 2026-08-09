@@ -281,7 +281,9 @@
 
   function setCollapsed(block, collapsed) {
     prepareVariantBlock(block);
-    const toggle = block.querySelector(":scope > .variant-note__toggle");
+    const toggle = Array.prototype.find.call(block.children, function (child) {
+      return child.classList && child.classList.contains("variant-note__toggle");
+    });
     block.classList.toggle("variant-note--collapsed", collapsed);
     if (toggle) {
       toggle.hidden = !collapsed;
@@ -292,31 +294,21 @@
 
   function applyVariantFiltering() {
     const mode = config.ui.mode || "context";
-    const configured = Core.selectedValueCount(config) > 0;
 
     document.querySelectorAll(".variant-note[data-when]").forEach(function (block) {
       prepareVariantBlock(block);
 
-      const state = configured
-        ? Core.evaluateExpression(config, block.dataset.when)
-        : "unknown";
+      const display = Core.variantDisplayState(
+        config,
+        block.dataset.when,
+        mode,
+        block.dataset.safety
+      );
 
-      block.dataset.filterState = state;
+      block.dataset.filterState = display.filterState;
       block.classList.toggle("variant-note--safety", block.dataset.safety === "true");
-      block.hidden = false;
-      setCollapsed(block, false);
-
-      if (block.dataset.safety === "true") return;
-      if (mode === "all") return;
-
-      if (mode === "mine") {
-        block.hidden = state === "nomatch";
-        return;
-      }
-
-      if (mode === "context" && state === "nomatch") {
-        setCollapsed(block, true);
-      }
+      block.hidden = display.hidden;
+      setCollapsed(block, display.collapsed);
     });
   }
 
