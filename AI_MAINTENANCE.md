@@ -20,6 +20,7 @@ Do not ask an AI agent to bypass branch protection, push directly to `main`, app
 - Prefer manufacturer, vendor, service manual and completed-build evidence.
 - Do not turn forum consensus into a hard instruction unless it is labeled and cross-checked.
 - Preserve the chapter-by-chapter build flow.
+- Preserve build-guide chapter navigation: every chapter page in `docs/build-guide/` must show top navigation directly below the breadcrumb with `Last Chapter {chapter name}` and `Next Chapter {chapter name}` links when adjacent chapters exist. Keep the chapter order in `docs/_data/build_chapters.yml` current when adding, removing or renaming chapters.
 - Every human-readable page must end with a `## Sources` section.
 - Maintain each page's `## Sources` table as page-local evidence: use columns `Claim` and `Source`, summarize the specific fact the page relies on, and make the source link text the site/vendor name rather than a raw URL.
 - When adding, removing or changing a claim on a page, update that same page's Sources table in the same commit. If a page has no page-specific external technical source yet, keep a single row that says so and replace it when sourced claims are added.
