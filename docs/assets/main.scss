@@ -388,6 +388,11 @@ body {
   gap: 0.55rem;
 }
 
+.build-config-bar__body[hidden],
+.build-config-bar--collapsed .build-config-bar__body {
+  display: none;
+}
+
 .build-config-bar__help {
   margin: 0;
   color: var(--guide-muted);
