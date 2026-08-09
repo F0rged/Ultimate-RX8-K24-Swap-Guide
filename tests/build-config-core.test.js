@@ -156,7 +156,7 @@ test("issue rules and counts exclude positive confirmations", () => {
   assert.equal(Core.issueCount(c, rules, "none"), 0);
 });
 
-test("my build mode shows only confirmed variant matches", () => {
+test("variant notes show only confirmed build matches", () => {
   const c = config({ "engine.head": "rbb" });
   assert.deepEqual(Core.variantDisplayState(c, "engine.head=rbb", "mine"), {
     filterState: "match",
@@ -175,27 +175,27 @@ test("my build mode shows only confirmed variant matches", () => {
   });
 });
 
-test("all and context modes preserve alternative visibility differently", () => {
+test("all and context modes do not show alternative variant notes", () => {
   const c = config({ "engine.head": "rbb" });
   assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", "all"), {
     filterState: "nomatch",
-    hidden: false,
+    hidden: true,
     collapsed: false
   });
   assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", "context"), {
     filterState: "nomatch",
-    hidden: false,
-    collapsed: true
+    hidden: true,
+    collapsed: false
   });
 });
 
-test("safety variant notes are never hidden or collapsed by filtering", () => {
+test("safety variant notes still require a confirmed build match", () => {
   const c = Core.defaultConfig();
   c.ui.alerts = "none";
   ["context", "mine", "all"].forEach((mode) => {
     assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", mode, true), {
       filterState: "unknown",
-      hidden: false,
+      hidden: true,
       collapsed: false
     });
   });
