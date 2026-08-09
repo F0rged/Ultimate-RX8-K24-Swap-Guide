@@ -42,7 +42,7 @@ test("variant data-when expressions use declared config paths", () => {
 
   const failures = [];
 
-  for (const file of walkMarkdown(path.join("docs", "build-guide"))) {
+  for (const file of walkMarkdown("docs")) {
     const text = fs.readFileSync(file, "utf8");
     const matches = [
       ...text.matchAll(/data-when=(?:"([^"]+)"|'([^']+)')/g)
@@ -61,6 +61,19 @@ test("variant data-when expressions use declared config paths", () => {
         failures.push(`${file}: ${error.message}`);
       }
     }
+  }
+
+  assert.deepEqual(failures, []);
+});
+
+test("pages with variant notes declare build topics", () => {
+  const failures = [];
+
+  for (const file of walkMarkdown("docs")) {
+    const text = fs.readFileSync(file, "utf8");
+    if (!text.includes("variant-note")) continue;
+    const topics = yamlListAfterKey(frontMatter(text), "build_topics");
+    if (!topics.length) failures.push(`${file}: variant notes require build_topics`);
   }
 
   assert.deepEqual(failures, []);
@@ -125,6 +138,9 @@ test("compatibility rules and build-guide chapters declare alert topics", () => 
   const failures = [];
   const compatibilityYaml = fs.readFileSync(path.join("docs", "_data", "compatibility.yml"), "utf8");
   const rules = compatibilityYaml.split(/\n\s*\n/).filter((block) => /^\s+- id:/m.test(block));
+  const chaptersYaml = fs.readFileSync(path.join("docs", "_data", "build_chapters.yml"), "utf8");
+  const chapterFiles = [...chaptersYaml.matchAll(/^\s+url:\s+\/build-guide\/([^/\r\n]+)\.html\s*$/gm)]
+    .map((match) => path.join("docs", "build-guide", `${match[1]}.md`));
 
   for (const rule of rules) {
     const id = (rule.match(/^\s+- id:\s+([A-Za-z0-9_-]+)/m) || [null, "unknown"])[1];
@@ -135,9 +151,8 @@ test("compatibility rules and build-guide chapters declare alert topics", () => 
     });
   }
 
-  for (const file of walkMarkdown(path.join("docs", "build-guide"))) {
+  for (const file of chapterFiles) {
     const name = path.basename(file);
-    if (name === "index.md") continue;
     const topics = yamlListAfterKey(frontMatter(fs.readFileSync(file, "utf8")), "build_topics");
     if (!topics.length) failures.push(`${name}: missing build_topics`);
     topics.forEach((topic) => {

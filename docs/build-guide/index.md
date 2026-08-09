@@ -22,8 +22,11 @@ This is the sequential, prescriptive path through an RX-8 K-series swap. Read it
 10. [Electrical, ECU and CAN integration](09-electrical-ecu-can-s2.html)
 11. [First start and commissioning](10-first-start-commissioning.html)
 12. [Shakedown and validation](11-shakedown-validation.html)
-13. [KPower / NC alternative path](12-kpower-alternative.html)
-14. [Open questions and validation register](13-open-questions.html)
+
+## Related references
+
+- [KPower / NC-derived architecture]({{ '/reference/kpower-nc-architecture/' | relative_url }})
+- [Open questions and validation register]({{ '/reference/open-questions/' | relative_url }})
 
 ## Project gates
 
