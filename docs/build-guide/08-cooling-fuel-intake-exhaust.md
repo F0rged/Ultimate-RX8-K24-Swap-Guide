@@ -1,6 +1,13 @@
 ---
 layout: page
 title: "08 — Cooling, fuel, intake and exhaust"
+build_topics:
+  - cooling
+  - radiator
+  - fuel
+  - intake
+  - exhaust
+  - fitment
 ---
 
 # 08 — Cooling, fuel, intake and exhaust

@@ -1,6 +1,13 @@
 ---
 layout: page
 title: "10 — First start and commissioning"
+build_topics:
+  - commissioning
+  - electrical
+  - ecu
+  - fuel
+  - cooling
+  - safety
 ---
 
 # 10 — First start and commissioning

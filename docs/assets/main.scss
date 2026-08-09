@@ -396,6 +396,17 @@ body {
   gap: 0.4rem;
 }
 
+.build-config-issue-count {
+  flex: 0 0 auto;
+  padding: 0.28rem 0.5rem;
+  border: 1px solid var(--guide-accent-bright);
+  border-radius: 999px;
+  color: var(--guide-accent);
+  background: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .build-config-button,
 .build-config-mode {
   min-height: 34px;

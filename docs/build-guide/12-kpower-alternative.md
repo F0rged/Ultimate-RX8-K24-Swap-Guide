@@ -1,6 +1,13 @@
 ---
 layout: page
 title: "12 - KPower / NC-derived architecture"
+build_topics:
+  - architecture
+  - mounts
+  - steering
+  - transmission
+  - engine
+  - fitment
 ---
 
 # 12 - KPower / NC-derived architecture

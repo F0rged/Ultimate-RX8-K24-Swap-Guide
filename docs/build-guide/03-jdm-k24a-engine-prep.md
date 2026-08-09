@@ -1,6 +1,13 @@
 ---
 layout: page
 title: "03 - K-series engine preparation"
+build_topics:
+  - engine
+  - cooling
+  - intake
+  - exhaust
+  - harness
+  - fitment
 ---
 
 # 03 - K-series engine preparation

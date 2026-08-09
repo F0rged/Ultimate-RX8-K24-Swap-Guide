@@ -1,6 +1,14 @@
 ---
 layout: page
 title: "09 - Electrical, ECU and CAN integration"
+build_topics:
+  - electrical
+  - ecu
+  - can
+  - harness
+  - instrumentation
+  - eps
+  - abs
 ---
 
 # 09 - Electrical, ECU and CAN integration

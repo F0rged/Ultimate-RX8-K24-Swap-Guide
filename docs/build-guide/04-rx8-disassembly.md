@@ -1,6 +1,10 @@
 ---
 layout: page
 title: "04 — RX-8 baseline and disassembly"
+build_topics:
+  - chassis
+  - safety
+  - electrical
 ---
 
 # 04 — Baseline and disassemble the RX-8

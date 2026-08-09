@@ -1,6 +1,13 @@
 ---
 layout: page
 title: "00 - Scope and safety"
+build_topics:
+  - scope
+  - safety
+  - chassis
+  - engine
+  - architecture
+  - validation
 ---
 
 # 00 - Scope, assumptions and safety

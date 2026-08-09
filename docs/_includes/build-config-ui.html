@@ -12,7 +12,13 @@
       <option value="mine">My build only</option>
       <option value="all">Show all variants</option>
     </select>
+    <label class="build-config-mode-label" for="build-config-alert-mode">Build alerts</label>
+    <select id="build-config-alert-mode" class="build-config-mode">
+      <option value="relevant">Relevant</option>
+      <option value="none">None</option>
+    </select>
   </div>
+  <span id="build-config-issue-count" class="build-config-issue-count" hidden></span>
 </section>
 
 <div id="build-config-alerts" class="build-config-alerts" aria-live="polite"></div>

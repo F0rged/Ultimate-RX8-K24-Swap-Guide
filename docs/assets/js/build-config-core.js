@@ -52,7 +52,8 @@
         ac: ""
       },
       ui: {
-        mode: "context"
+        mode: "context",
+        alerts: "relevant"
       }
     };
   }
@@ -164,6 +165,7 @@
     mergeKnown(clean, candidate);
     clean.schemaVersion = SCHEMA_VERSION;
     if (!["context", "mine", "all"].includes(clean.ui.mode)) clean.ui.mode = "context";
+    if (!["relevant", "none"].includes(clean.ui.alerts)) clean.ui.alerts = "relevant";
     return clean;
   }
 
@@ -217,7 +219,7 @@
   }
 
   function selectedValueCount(config) {
-    const ignored = new Set(["schemaVersion", "profileName", "mode"]);
+    const ignored = new Set(["schemaVersion", "profileName", "mode", "alerts"]);
     let count = 0;
 
     function visit(value, key) {
@@ -233,6 +235,38 @@
 
     visit(config, "");
     return count;
+  }
+
+  function isPositiveRule(rule) {
+    return Boolean(rule && (rule.status === "documented" || rule.severity === "info"));
+  }
+
+  function issueRules(config, rules) {
+    return matchingRules(config, rules).filter(function (rule) {
+      return !isPositiveRule(rule);
+    });
+  }
+
+  function topicsIntersect(ruleTopics, pageTopics) {
+    if (!Array.isArray(ruleTopics) || !Array.isArray(pageTopics)) return false;
+    const pageTopicSet = new Set(pageTopics.map(normalize).filter(Boolean));
+    if (!pageTopicSet.size) return false;
+    return ruleTopics.map(normalize).some(function (topic) {
+      return pageTopicSet.has(topic);
+    });
+  }
+
+  function pageAlertRules(config, rules, pageTopics, alertsPreference) {
+    if (alertsPreference === "none") return [];
+    if (!Array.isArray(pageTopics) || pageTopics.length === 0) return [];
+    return issueRules(config, rules).filter(function (rule) {
+      return topicsIntersect(rule.topics, pageTopics);
+    });
+  }
+
+  function issueCount(config, rules, alertsPreference) {
+    if (alertsPreference === "none") return 0;
+    return issueRules(config, rules).length;
   }
 
   function variantDisplayState(config, expression, mode, safety) {
@@ -266,6 +300,11 @@
     parseExpression: parseExpression,
     evaluateExpression: evaluateExpression,
     matchingRules: matchingRules,
+    isPositiveRule: isPositiveRule,
+    issueRules: issueRules,
+    topicsIntersect: topicsIntersect,
+    pageAlertRules: pageAlertRules,
+    issueCount: issueCount,
     sanitizeConfig: sanitizeConfig,
     encodeConfig: encodeConfig,
     decodeConfig: decodeConfig,

@@ -19,6 +19,22 @@ function walkMarkdown(dir) {
   });
 }
 
+function frontMatter(text) {
+  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  return match ? match[1] : "";
+}
+
+function yamlListAfterKey(text, key) {
+  const inline = text.match(new RegExp("^" + key + ":\\s*\\[([^\\]]*)\\]", "m"));
+  if (inline) {
+    return inline[1].split(",").map((item) => item.trim()).filter(Boolean);
+  }
+
+  const match = text.match(new RegExp("^" + key + ":\\s*\\r?\\n((?:\\s+-\\s+[^\\r\\n]+\\r?\\n?)+)", "m"));
+  if (!match) return [];
+  return [...match[1].matchAll(/^\s+-\s+([A-Za-z0-9_-]+)\s*$/gm)].map((item) => item[1]);
+}
+
 test("variant data-when expressions use declared config paths", () => {
   const optionsYaml = fs.readFileSync(path.join("docs", "_data", "build_options.yml"), "utf8");
   const validPaths = buildOptionPaths(optionsYaml);
@@ -71,6 +87,62 @@ test("compatibility rule expressions use declared config paths", () => {
     } catch (error) {
       failures.push(error.message);
     }
+  }
+
+  assert.deepEqual(failures, []);
+});
+
+test("compatibility rules and build-guide chapters declare alert topics", () => {
+  const allowedTopics = new Set([
+    "architecture",
+    "chassis",
+    "mounts",
+    "fitment",
+    "engine",
+    "transmission",
+    "driveline",
+    "clutch",
+    "steering",
+    "suspension",
+    "eps",
+    "electrical",
+    "ecu",
+    "can",
+    "harness",
+    "instrumentation",
+    "abs",
+    "cooling",
+    "radiator",
+    "fuel",
+    "intake",
+    "exhaust",
+    "commissioning",
+    "validation",
+    "safety",
+    "research",
+    "scope"
+  ]);
+  const failures = [];
+  const compatibilityYaml = fs.readFileSync(path.join("docs", "_data", "compatibility.yml"), "utf8");
+  const rules = compatibilityYaml.split(/\n\s*\n/).filter((block) => /^\s+- id:/m.test(block));
+
+  for (const rule of rules) {
+    const id = (rule.match(/^\s+- id:\s+([A-Za-z0-9_-]+)/m) || [null, "unknown"])[1];
+    const topics = yamlListAfterKey(rule, "\\s+topics");
+    if (!topics.length) failures.push(`${id}: missing topics`);
+    topics.forEach((topic) => {
+      if (!allowedTopics.has(topic)) failures.push(`${id}: unknown topic ${topic}`);
+    });
+  }
+
+  for (const file of walkMarkdown(path.join("docs", "build-guide"))) {
+    const name = path.basename(file);
+    if (name === "index.md") continue;
+    const topics = yamlListAfterKey(frontMatter(fs.readFileSync(file, "utf8")), "build_topics");
+    if (!topics.length) failures.push(`${name}: missing build_topics`);
+    topics.forEach((topic) => {
+      if (!allowedTopics.has(topic)) failures.push(`${name}: unknown topic ${topic}`);
+    });
   }
 
   assert.deepEqual(failures, []);

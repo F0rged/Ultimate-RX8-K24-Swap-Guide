@@ -1,6 +1,13 @@
 ---
 layout: page
 title: "05 — Fitment and fabrication"
+build_topics:
+  - fitment
+  - mounts
+  - steering
+  - engine
+  - cooling
+  - exhaust
 ---
 
 # 05 — Dry-fit, firewall and front-structure work

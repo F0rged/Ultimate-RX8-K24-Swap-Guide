@@ -1,6 +1,14 @@
 ---
 layout: page
 title: "01 - Choose the architecture"
+build_topics:
+  - architecture
+  - chassis
+  - mounts
+  - fitment
+  - transmission
+  - driveline
+  - steering
 ---
 
 # 01 - Choose the architecture
