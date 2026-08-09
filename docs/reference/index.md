@@ -10,7 +10,12 @@ This area is for supporting material that is useful during the swap but too deta
 
 ## Current references
 
-- [Research references]({{ '/reference/sources/' | relative_url }}) - annotated source list and evidence notes.
 - [Machine-readable BOM](../data/bom.csv) - parts, planning prices and source notes.
 - [Research matrix](../data/research-matrix.csv) - major claims, evidence and confidence.
-- [Source catalog](../data/sources.csv) - structured source inventory.
+- [Source catalog](../data/sources.csv) - structured source inventory used by the page-local source tables.
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| This page is a navigation index for repository reference artifacts; it does not add page-specific external technical claims. | No external source cited. |

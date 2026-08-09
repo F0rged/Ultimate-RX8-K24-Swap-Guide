@@ -1,0 +1,20 @@
+{% assign build_chapters = site.data.build_chapters %}
+
+{% for chapter in build_chapters %}
+  {% if page.url == chapter.url %}
+    <nav class="build-chapter-nav" aria-label="Chapter navigation">
+      {% if chapter.last_url %}
+        <a class="build-chapter-nav-link build-chapter-nav-link-previous" href="{{ chapter.last_url | relative_url }}">
+          <span>Last Chapter</span>
+          <strong>{{ chapter.last_title | escape }}</strong>
+        </a>
+      {% endif %}
+      {% if chapter.next_url %}
+        <a class="build-chapter-nav-link build-chapter-nav-link-next" href="{{ chapter.next_url | relative_url }}">
+          <span>Next Chapter</span>
+          <strong>{{ chapter.next_title | escape }}</strong>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endfor %}

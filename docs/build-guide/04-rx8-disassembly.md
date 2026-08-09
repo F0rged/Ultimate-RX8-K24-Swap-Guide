@@ -89,3 +89,10 @@ The S2 gearbox is related in architecture to NC-family Mazda units, but the rota
 ## Donor Gate
 
 Do not proceed to fabrication until any pre-existing ABS, steering or chassis faults that would invalidate later testing are documented and understood.
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| Collins' K-to-RX-8 kit confirms the retained RX-8 5/6-speed transmission path and required adapter/flywheel architecture. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/products/honda-k-series-to-mazda-rx-8-swap-kit) |
+| Collins' installation sequence preserves the RX-8 transmission/PPF relationship while fitting the K-series engine. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
