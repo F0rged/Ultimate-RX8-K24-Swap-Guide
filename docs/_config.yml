@@ -29,9 +29,12 @@ defaults:
       area_url: /reference/
 
 giscus:
-  enabled: false
+  enabled: true
   repo: F0rged/Ultimate-RX8-K24-Swap-Guide
-  repo_id: ""
-  category: "General"
-  category_id: ""
+  repo_id: "R_kgDOTyXbHA"
+  category: "Announcements"
+  category_id: "DIC_kwDOTyXbHM4DC-Ez"
   mapping: pathname
+  strict: "0"
+  input_position: top
+  theme: light
