@@ -50,3 +50,10 @@ The full gate list now lives in the [Build Guide](build-guide/). Do not advance 
 ## One S2-specific warning
 
 KPower's RX-8 compatibility guidance explicitly distinguishes the S2 electronics problem: their published guidance does **not** present S2 RX-8 CAN integration as a solved plug-and-play system. Build the car so that a functioning K24 ECU, steering strategy and instrumentation do not depend on a future CAN breakthrough.
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| The reference path retains the RX-8 transmission, PPF and rear driveline using Collins K-to-RX-8 components and instructions. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
+| The KPower / NC architecture uses an RX-8-compatible tubular subframe and avoids rack spacers when paired with an NC rack, but KPower does not present a complete RX-8 package or solved S2 CAN path. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |

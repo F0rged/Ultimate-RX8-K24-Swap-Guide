@@ -33,3 +33,14 @@ A pull request should ideally include:
 - observed failure behavior, not only success
 - part numbers
 - date and vendor links
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| Collins' RX-8 CAN emulator claims leave S2 manual validation as an open question. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/products/rx-8-wiring-emulator-for-canbus) |
+| All4Swap's RX-8 CAN interface asks for chassis type/model year, supporting model-year-specific validation questions. | [All4Swap](https://all4swap.ru/product/rx8) |
+| KPower's RX-8 compatibility guide supports the KPower front-end path while leaving the complete S2 rear-driveline recipe and S2 CAN path unresolved. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| The 2009 RX-8 fuel-pressure service spec supports the known factory feed-pressure baseline and the unresolved aftermarket return-strategy question. | [Operation CHARM](https://charm.li/Mazda/2009/RX8%202RTR-1.3L/Repair%20and%20Diagnosis/Powertrain%20Management/Tune-up%20and%20Engine%20Performance%20Checks/Fuel%20Pressure/Testing%20and%20Inspection/) |
+| Completed K24 RX-8 build logs support keeping firewall dimensions and crossmember details open until a measured reference car exists. | [K24RX8](https://k24rx8.com/2018/10/23/initial-fitment/) |
+| Public RX-8 reverse-engineering work is useful CAN research input, not a closed S2 swap interface. | [GitHub](https://github.com/rnd-ash/rx8-reverse-engineering) |

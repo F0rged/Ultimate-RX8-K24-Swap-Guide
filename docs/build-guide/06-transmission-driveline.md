@@ -104,3 +104,12 @@ Before plumbing/wiring, you should be able to:
 - rotate drivetrain by hand without abnormal binding
 - operate clutch release mechanically/hydraulically
 - support the car on its intended driveline mounts with no forced alignment
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| Collins lists RX-8 5-speed and 6-speed transmissions as supported K-series applications and supplies the retained-RX-8-driveline conversion components. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/products/honda-k-series-to-mazda-rx-8-swap-kit) |
+| Collins' installation instructions provide adapter/flywheel procedure context and retained-PPF installation sequencing. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
+| Older independent build notes document adapter/transmission/PPF installation lessons and why vendor revision details matter. | [K-Swapped RX-8](https://www.kswappedrx8.com/2021/04/fitting-k24-part-2.html) |
+| KPower's RX-8 compatibility guidance permits NC-transmission-based planning but does not publish a complete S2 RX-8 rear-driveline recipe. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |

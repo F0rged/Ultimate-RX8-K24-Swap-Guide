@@ -117,3 +117,13 @@ Pass when:
 - ABS unit and lines are secure and heat-safe
 - starter, coolant neck, sensors and valve cover are serviceable
 - no bare/unsealed firewall or structural metal remains
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| Collins' retained-RX-8-transmission instructions define the adapter install sequence, firewall recess guidance, rack relocation, crossmember notch, ABS relocation and starter/bellhousing clearance work. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
+| KPower's RX-8-compatible architecture should be expected to require extensive firewall cutting and welding. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| Completed K24RX8 fitment work documents cowl/firewall packaging conflicts, repeated mock-up and stock-subframe interference. | [K24RX8](https://k24rx8.com/2018/10/23/initial-fitment/) |
+| A JDM K24A/RBB-head RX-8 build documents coolant-outlet, firewall, ABS, rack and subframe issues. | [K-Swapped RX-8](https://www.kswappedrx8.com/2021/03/fitting-k24-into-car-part-one.html) |
+| The same K-swapped RX-8 build documents adapter, transmission, PPF installation and the actual firewall outcome. | [K-Swapped RX-8](https://www.kswappedrx8.com/2021/04/fitting-k24-part-2.html) |

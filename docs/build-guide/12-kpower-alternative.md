@@ -95,3 +95,14 @@ Before making this branch prescriptive for an S2, the repository needs a validat
 - rear mount geometry
 
 Until then, this path is **front-end validated, rear-driveline design required**.
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| KPower's RX-8-compatible NC-derived component ecosystem supports the tubular subframe, mount, NC steering, standalone EPS, A/C, intake, oil-pan, electronics, radiator and S2 CAN caveat claims on this page. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| KPower's RX-8 catalog is used for current RX-8-tagged component listings and prices. | [KPower Industries](https://kpower.industries/collections/04-11-rx8) |
+| KPower's NC Race package is used as a physical-parts and cost benchmark, not as a complete RX-8 kit. | [KPower Industries](https://kpower.industries/collections/kpower-nc-mx5-swap-parts/products/kpower-nc-mx5-swap-kit-no-electronics) |
+| KPower's complete NC package is used for component architecture and sensor/mount compatibility context. | [KPower Industries](https://kpower.industries/collections/items-with-lead-times/products/complete-kpower-nc-mx5-swap-package) |
+| KPower's NC hydraulic steering kit is used as the hydraulic steering architecture reference. | [KPower Industries](https://kpower.industries/products/k-swap-nc-power-steering-kit) |
+| KPower's NC A/C kit is the physical compressor-mounting reference for the A/C note. | [KPower Industries](https://kpower.industries/products/k-swap-nc-air-conditioning-kit) |

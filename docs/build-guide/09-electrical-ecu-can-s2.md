@@ -125,3 +125,14 @@ The car does not graduate from stationary commissioning until:
 - charging voltage is stable
 - brake/ABS warning state is understood
 - no safety-critical function is being inferred from a dark warning lamp
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| KPower's RX-8 compatibility article says its S2 RX-8 CAN solution is not sorted like its established integrations, so the first-running engine should not depend on stock S2 CAN behavior. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| KPower publishes universal K24 harness guidance and NC K24 basemaps through its installation-guides index. | [KPower Industries](https://kpower.industries/pages/installation-guides) |
+| Collins' RX-8 CAN emulator product is treated as a candidate integration path whose S2 compatibility still needs validation. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/products/rx-8-wiring-emulator-for-canbus) |
+| All4Swap's RX-8 CAN interface order flow asks for chassis type/model year, supporting model-year-specific compatibility caution. | [All4Swap](https://all4swap.ru/product/rx8) |
+| Public RX-8 reverse-engineering work is useful for CAN research but is not a validated S2 swap interface by itself. | [GitHub](https://github.com/rnd-ash/rx8-reverse-engineering) |
+| KPower's NC A/C kit is physical compressor-mounting context; S2 cabin request and control logic still need a verified integration path. | [KPower Industries](https://kpower.industries/products/k-swap-nc-air-conditioning-kit) |

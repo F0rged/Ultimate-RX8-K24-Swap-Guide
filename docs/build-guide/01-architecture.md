@@ -93,3 +93,12 @@ For this edition:
 **Reference = JDM K24A/RBB + Collins K-to-RX-8 adapter + stock 2009 S2 6-speed/PPF/diff + standalone ECU.**
 
 The KPower tubular-subframe path remains the preferred alternative for a builder prepared to solve the NC-style rear-driveline interface.
+
+## Sources
+
+| Claim | Source |
+| --- | --- |
+| Collins supports K20/K24 engines with RX-8 5-speed and 6-speed transmissions and sells the core adapter, flywheel, mount and clutch-related components. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/products/honda-k-series-to-mazda-rx-8-swap-kit) |
+| Collins' current instructions document ABS relocation, rack relocation, crossmember notching, firewall/cowl work and starter/bellhousing clearancing. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
+| KPower confirms its RX-8-compatible NC-derived subframe, mount, steering, A/C, intake, oil-pan, electronics and S2 CAN caveats, while saying it does not offer a complete RX-8 package. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
+| KPower's current RX-8 catalog is used to identify RX-8-tagged KPower parts and prices. | [KPower Industries](https://kpower.industries/collections/04-11-rx8) |
