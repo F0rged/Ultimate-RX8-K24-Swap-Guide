@@ -5,6 +5,8 @@ title: "03 — JDM K24A/RBB engine preparation"
 
 # 03 — JDM K24A/RBB engine preparation
 
+> Considering a different K-series engine, a K20 head, or a K20/K24 hybrid? Read the [K-series engine and head/block selection reference](../reference/k-series-engine-head-combinations/) before buying parts. Block deck height, head coolant architecture and mount-path support change RX-8 fitment.
+
 ## 3.1 Do not buy by the block stamp alone
 
 Japanese-market engines are often sold simply as **K24A**. For this swap, the desirable reference engine is the high-output **RBB-head** family that KPower treats as essentially equivalent to the 2004–2008 TSX K24A2 family for its swap hardware.
@@ -77,7 +79,7 @@ Do **not** rebuild a healthy engine merely because it is on the stand. Spend the
 
 ## 3.5 Coolant outlet — critical RX-8 packaging item
 
-In transverse orientation, the K24A/RBB coolant outlet is at the end of the cylinder head that becomes the **rear** in a longitudinal/RWD install. That points it at the RX-8 firewall/transmission tunnel area.
+In transverse orientation, the K24A/RBB coolant outlet is at the end of the cylinder head that becomes the **rear** in a longitudinal/RWD install. That points it at the RX-8 firewall/transmission tunnel area. This warning applies to the later RBB/RBC-style four-bolt upper-water-neck family, including K20Z/RBC heads; a PRB head changes the coolant architecture but still needs RWD-specific coolant-neck planning.
 
 Use an intake-side/low-profile RWD coolant neck early in the mock-up. KPower currently sells an NC/RX-8-relevant intake-side neck for the RBB/K20Z family.
 
@@ -121,6 +123,7 @@ Pass only when:
 
 | Claim | Source |
 | --- | --- |
+| KPower's engine guidance and FAQ distinguish K24A2/JDM K24A, K20Z3 and K20A2/K20Z1 block support, and the reference page applies those differences to RX-8 packaging choices. | [KPower Industries](https://kpower.industries/blogs/news/engine-guidance-for-a-successful-project) and [KPower FAQ](https://kpower.industries/pages/faqs) |
 | JDM K24A/RBB importer listings are used as examples of three-lobe/RBB identity and seller-verification practices. | [Japan Motor Import](https://japanmotorimport.ca/products/jdm-hondaacura-tsx-k24a-k24a2-rbb-3-lobe-engine) |
 | A current US JDM K24A/RBB listing is used as an engine-market and actual-unit verification snapshot. | [JDM Alliance](https://www.jdm-online.com/products/jdm-04-08-honda-k24a-2-4l-dohc-i-vtec-rbb-200hp-engine-k24a2-acura-tsx-33) |
 | KPower documents JDM K24A/RBB accessory-drive differences and recommends a USDM-style water-pump housing conversion. | [KPower Industries](https://kpower.industries/products/usdm-k24a-water-pump-housing) |
