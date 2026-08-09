@@ -66,15 +66,3 @@
   url: /build-guide/11-shakedown-validation.html
   last_title: "10 - First start and commissioning"
   last_url: /build-guide/10-first-start-commissioning.html
-  next_title: "12 - KPower / NC-derived architecture"
-  next_url: /build-guide/12-kpower-alternative.html
-- title: "12 - KPower / NC-derived architecture"
-  url: /build-guide/12-kpower-alternative.html
-  last_title: "11 - Shakedown and validation"
-  last_url: /build-guide/11-shakedown-validation.html
-  next_title: "13 - Open questions / validation register"
-  next_url: /build-guide/13-open-questions.html
-- title: "13 - Open questions / validation register"
-  url: /build-guide/13-open-questions.html
-  last_title: "12 - KPower / NC alternative"
-  last_url: /build-guide/12-kpower-alternative.html

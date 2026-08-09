@@ -4,7 +4,7 @@ layout: default
 
 <article class="page-content rx8-guide-page" itemscope itemtype="http://schema.org/Article">
   {% include guide-header.html %}
-  {% if page.url contains '/build-guide/' %}
+  {% if page.url == '/build-guide/' or page.build_topics %}
     {% include build-config-ui.html %}
   {% endif %}
 
@@ -13,7 +13,7 @@ layout: default
   </div>
 
   {% include giscus.html %}
-  {% if page.url contains '/build-guide/' %}
+  {% if page.url == '/build-guide/' or page.build_topics %}
     {% include build-config-data.html %}
   {% endif %}
 </article>
