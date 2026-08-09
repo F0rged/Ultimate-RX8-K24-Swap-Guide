@@ -69,6 +69,48 @@ test("unknown keys are discarded by sanitizeConfig", () => {
   assert.equal("extra" in clean.engine, false);
 });
 
+test("my build mode shows only confirmed variant matches", () => {
+  const c = config({ "engine.head": "rbb" });
+  assert.deepEqual(Core.variantDisplayState(c, "engine.head=rbb", "mine"), {
+    filterState: "match",
+    hidden: false,
+    collapsed: false
+  });
+  assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", "mine"), {
+    filterState: "nomatch",
+    hidden: true,
+    collapsed: false
+  });
+  assert.deepEqual(Core.variantDisplayState(c, "chassis.series=s2", "mine"), {
+    filterState: "unknown",
+    hidden: true,
+    collapsed: false
+  });
+});
+
+test("all and context modes preserve alternative visibility differently", () => {
+  const c = config({ "engine.head": "rbb" });
+  assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", "all"), {
+    filterState: "nomatch",
+    hidden: false,
+    collapsed: false
+  });
+  assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", "context"), {
+    filterState: "nomatch",
+    hidden: false,
+    collapsed: true
+  });
+});
+
+test("safety variant notes are never hidden or collapsed by filtering", () => {
+  const c = Core.defaultConfig();
+  assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", "mine", true), {
+    filterState: "unknown",
+    hidden: false,
+    collapsed: false
+  });
+});
+
 test("smoke fixture profiles match expected compatibility rules", () => {
   const fixtures = JSON.parse(fs.readFileSync(path.join("tests", "smoke-fixtures.json"), "utf8"));
   const compatibilityYaml = fs.readFileSync(path.join("docs", "_data", "compatibility.yml"), "utf8");
