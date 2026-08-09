@@ -5,7 +5,7 @@ title: "06 — Transmission, clutch and driveline"
 
 # 06 — Transmission, clutch and driveline
 
-## Reference path: retain the 2009 S2 6-speed
+## Documented manual path: retain an RX-8 5-speed or 6-speed
 
 Collins currently lists both RX-8 5-speed and 6-speed transmissions as supported K-series applications.
 
@@ -20,7 +20,7 @@ Required architecture components include:
 - K-series/RX-8 engine mounts and K24 mount adapter
 - clutch slave solution compatible with the conversion
 
-## 6.1 Inspect the S2 gearbox before trapping it behind a fabricated firewall
+## 6.1 Inspect the selected gearbox before trapping it behind a fabricated firewall
 
 Replace questionable external seals now. Check:
 
