@@ -26,9 +26,9 @@ Before disassembly, record:
 
 Video the cluster during key-on and start. Photograph every engine-bay harness routing and ground point.
 
-For an S2, this baseline is particularly valuable because engine removal changes a networked system, not just an engine.
+This baseline is particularly valuable because engine removal changes a networked system, not just an engine. S1 and S2 behavior should be recorded separately rather than assumed identical.
 
-## 4.2 Preserve S2 electronics
+## 4.2 Preserve RX-8 electronics
 
 Do not cut the RX-8 engine harness at random.
 
@@ -63,9 +63,9 @@ Even if the first-running configuration uses a standalone dash, preserving facto
 13. Remove engine and/or engine-transmission assembly using the method appropriate to the selected architecture.
 14. Bag and label RX-8 fasteners by subsystem.
 
-## 4.4 S2 driveline preservation
+## 4.4 Manual driveline preservation
 
-On the reference path, the RX-8 S2:
+On a retained-manual-driveline path, the RX-8:
 
 - 6-speed
 - PPF
@@ -84,7 +84,7 @@ Inspect before reuse:
 - driveshaft U-joints/CV elements as applicable
 - clutch hydraulic master condition
 
-The S2 gearbox is related in architecture to NC-family Mazda units, but the rotary bellhousing is not a K-series bellhousing; the K-to-RX-8 adapter/flywheel remains required.
+Some RX-8 gearboxes are related in architecture to NC-family Mazda units, but the rotary bellhousing is not a K-series bellhousing; the K-to-RX-8 adapter/flywheel remains required for the retained RX-8 manual path.
 
 ## Donor Gate
 

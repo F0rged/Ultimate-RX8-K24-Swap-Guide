@@ -30,3 +30,11 @@ jobs:
         with:
           source: ./docs
           destination: ./_site
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Test build configurator
+        run: node --test tests/*.test.js

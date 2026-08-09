@@ -11,9 +11,23 @@ This chapter separates first-start engine control from RX-8 body-network integra
 
 The engine must be able to start, idle, show critical data and protect itself without depending on an unvalidated RX-8 CAN solution. Treat OEM cluster, EPS, ABS/DSC and A/C integration as selected-variant work, not a generic K-series harness task.
 
+<div class="variant-note"
+     data-when="chassis.series=s1;electronics.can=haltech_s1"
+     data-variant-label="Series 1 Haltech CAN"
+     markdown="1">
+
 > **RX-8 variant - Series 1:** Haltech documents a Nexus plug-in ECU path for 2003-2008 manual RX-8s across multiple markets, with CAN-based ABS-module limitations. Verify the exact ABS module and market configuration before assuming OEM integration.
->
+
+</div>
+
+<div class="variant-note"
+     data-when="chassis.series=s2"
+     data-variant-label="Series 2 CAN"
+     markdown="1">
+
 > **RX-8 variant - Series 2:** KPower's RX-8 compatibility article says its 2nd Gen RX-8 CAN solution is not sorted in the same way as its established integrations. A 2009-2011 S2 build should not depend on stock S2 cluster, factory EPS or HVAC logic being magically satisfied by a K-series ECU.
+
+</div>
 
 ## 9.2 Engine electronics architecture
 
@@ -104,7 +118,15 @@ Validation should include:
 - controlled low-speed ABS activation test where safe/legal;
 - DSC testing only after engine torque/CAN signaling is understood.
 
+<div class="variant-note"
+     data-when="electronics.can=commercial_emulator|custom|haltech_s1"
+     data-safety="true"
+     data-variant-label="ABS/DSC validation"
+     markdown="1">
+
 Until proven, document the car as **ABS/DSC status unknown or disabled**, not "working."
+
+</div>
 
 ## 9.8 A/C
 

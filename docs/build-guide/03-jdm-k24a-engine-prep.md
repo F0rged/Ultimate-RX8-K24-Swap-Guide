@@ -25,11 +25,32 @@ Before purchase, ask for:
 
 A current Canadian importer listing, for example, explicitly markets a JDM K24A/RBB three-lobe engine for the 2004-2008 TSX application. A current US importer lists compression/leak-down testing and actual-unit photos. Use those practices as the buying standard, regardless of seller.
 
-> **K-series variant - K20Z3/RBC:** KPower lists K20Z3/Z4 in its standard mount family and notes the K20Z3 deck is lower than K24 engines. Do not reuse K24/RBB firewall or exhaust-height assumptions.
->
+<div class="variant-note"
+     data-when="engine.block=k20z3|k20z4;engine.head=rbc"
+     data-variant-label="K20Z / RBC engine"
+     markdown="1">
+
+> **K-series variant - K20Z/RBC:** KPower lists K20Z3/Z4 in its standard mount family and notes the K20Z3 deck is lower than K24 engines. Do not reuse K24/RBB firewall or exhaust-height assumptions.
+
+</div>
+
+<div class="variant-note"
+     data-when="engine.block=k20a2|k20z1;engine.head=prb"
+     data-variant-label="K20A2/K20Z1 PRB engine"
+     markdown="1">
+
 > **K-series variant - K20A2/PRB:** KPower's current mount family does not bolt to K20A2/K20Z1 blocks, while Collins advertises a K20A2 RX-8 adapter. PRB coolant and intake parts differ from RBB/RBC.
->
+
+</div>
+
+<div class="variant-note"
+     data-when="engine.block=k24z3;engine.head=r40"
+     data-variant-label="K24Z / R40 engine"
+     markdown="1">
+
 > **K-series variant - K24Z/R40:** Treat as a separate engineering branch. K24Z/R40 exhaust, trigger/wiring and manifold choices do not inherit K24A/RBB assumptions.
+
+</div>
 
 ## 3.2 Accessory differences that matter
 

@@ -12,8 +12,44 @@ Finish these systems **after** engine position is locked.
 ### Radiator by RX-8 year
 KPower's RX-8 catalog currently distinguishes RX-8 radiator applications, including separate 2004-2008 and 2009-2011 listings. A healthy OEM radiator can also be used if capacity/condition are adequate; the point is to buy the geometry for the actual RX-8, not a different series by mistake.
 
+<div class="variant-note"
+     data-when="chassis.year=2009|2010|2011;systems.radiator=rx8_04_08"
+     data-variant-label="S2 chassis with early radiator"
+     markdown="1">
+
+> **Compatibility:** The selected radiator geometry is for 2004-2008, but the configured chassis is 2009-2011. Recheck the radiator selection before ordering.
+
+</div>
+
+<div class="variant-note"
+     data-when="chassis.year=2004|2005|2006|2007|2008;systems.radiator=rx8_09_11"
+     data-variant-label="Early chassis with S2 radiator"
+     markdown="1">
+
+> **Compatibility:** The selected radiator geometry is for 2009-2011, but the configured chassis is 2004-2008. Recheck the radiator selection before ordering.
+
+</div>
+
 ### Upper outlet
 For a K24A/RBB or K20Z/RBC head, use the chosen intake-side/low-profile coolant neck. PRB and R40 heads need their own head-family-specific coolant/intake plan. The final parts must already have been used during firewall mock-up.
+
+<div class="variant-note"
+     data-when="engine.head=prb"
+     data-variant-label="PRB coolant and intake"
+     markdown="1">
+
+> **K-series variant - PRB:** Use a PRB-specific RWD coolant-neck and intake-manifold plan. Do not inherit the RBB/RBC coolant-neck recommendation.
+
+</div>
+
+<div class="variant-note"
+     data-when="engine.head=r40"
+     data-variant-label="R40 coolant and exhaust"
+     markdown="1">
+
+> **K-series variant - R40/K24Z:** The R40 head has a different intake/exhaust/coolant architecture. Do not use older-K four-port header assumptions.
+
+</div>
 
 ### Heater
 Decide before final hose routing:

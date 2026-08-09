@@ -365,3 +365,247 @@ body {
   font-size: 0.88rem;
   line-height: 1.45;
 }
+
+.build-config-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin: -0.7rem 0 1rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  background: var(--guide-panel);
+}
+
+.build-config-bar__summary {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.build-config-bar__summary span {
+  color: var(--guide-muted);
+  font-size: 0.88rem;
+}
+
+.build-config-bar__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.build-config-button,
+.build-config-mode {
+  min-height: 34px;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--guide-ink);
+}
+
+.build-config-button {
+  padding: 0.42rem 0.65rem;
+  cursor: pointer;
+}
+
+.build-config-button--primary {
+  border-color: var(--guide-accent);
+  color: #fff;
+  background: var(--guide-accent);
+}
+
+.build-config-button--danger {
+  color: var(--guide-accent);
+}
+
+.build-config-mode-label {
+  color: var(--guide-muted);
+  font-size: 0.8rem;
+}
+
+.build-config-dialog {
+  width: min(900px, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  border: 1px solid var(--guide-border);
+  border-radius: 8px;
+  padding: 0;
+}
+
+.build-config-dialog::backdrop {
+  background: rgba(21, 26, 34, 0.55);
+}
+
+.build-config-dialog form {
+  padding: 1rem;
+}
+
+.build-config-dialog__header,
+.build-config-dialog__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.build-config-dialog__header {
+  justify-content: space-between;
+}
+
+.build-config-dialog__header h2 {
+  margin: 0;
+}
+
+.build-config-close {
+  border: 0;
+  background: transparent;
+  color: var(--guide-muted);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.build-config-help {
+  color: var(--guide-muted);
+}
+
+.build-config-fieldset {
+  margin: 1rem 0;
+  padding: 0.85rem;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+}
+
+.build-config-fieldset legend {
+  padding: 0 0.35rem;
+  font-weight: 700;
+}
+
+.build-config-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.build-config-field {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.build-config-field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.build-config-field select {
+  min-width: 0;
+  padding: 0.45rem;
+  border: 1px solid var(--guide-border);
+  border-radius: 5px;
+  background: #fff;
+}
+
+.build-config-dialog__actions {
+  position: sticky;
+  bottom: 0;
+  padding-top: 0.8rem;
+  background: #fff;
+}
+
+.build-config-dialog__spacer {
+  flex: 1;
+}
+
+.build-config-alerts {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.65rem 0 1rem;
+}
+
+.build-config-alert {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--guide-border);
+  border-left: 4px solid var(--guide-muted);
+  border-radius: 5px;
+  background: #fff;
+}
+
+.build-config-alert--warning {
+  border-left-color: var(--guide-accent-bright);
+}
+
+.build-config-alert--error {
+  border-left-color: var(--guide-accent);
+}
+
+.build-config-alert p {
+  margin: 0.2rem 0 0;
+}
+
+.build-config-alert__sources {
+  font-size: 0.78rem;
+}
+
+.variant-note {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  background: var(--guide-panel);
+}
+
+.variant-note[data-filter-state="match"] {
+  border-left: 4px solid var(--guide-accent);
+}
+
+.variant-note[data-filter-state="unknown"] {
+  border-style: dashed;
+}
+
+.variant-note--safety {
+  border-left: 4px solid var(--guide-accent-bright);
+}
+
+.variant-note[data-filter-state="unknown"]::before,
+.variant-note[data-filter-state="nomatch"]::before {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--guide-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.variant-note[data-filter-state="unknown"]::before {
+  content: "Configuration incomplete";
+}
+
+.variant-note[data-filter-state="nomatch"]::before {
+  content: "Alternative build guidance";
+}
+
+.variant-note__toggle {
+  width: 100%;
+  border: 0;
+  padding: 0.15rem 0;
+  color: var(--guide-accent);
+  background: transparent;
+  text-align: left;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.variant-note--collapsed .variant-note__body {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .build-config-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .build-config-field-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -33,9 +33,23 @@ The installation instructions call for:
 - starter/bellhousing clearancing;
 - engine/trans installation with the RX-8 PPF in its stock driveline relationship.
 
+<div class="variant-note"
+     data-when="architecture.front=collins;chassis.originalTransmission=rx8_4at|rx8_6at"
+     data-variant-label="Collins with automatic donor"
+     markdown="1">
+
 > **RX-8 variant - automatic chassis:** This path is documented around RX-8 manual transmissions. An automatic donor needs a separate manual-conversion plan before this chapter becomes prescriptive.
->
+
+</div>
+
+<div class="variant-note"
+     data-when="architecture.front=collins;engine.block=k20a2|k20z3|k24a2|k24a4|k24z3|other"
+     data-variant-label="Collins engine-specific brackets"
+     markdown="1">
+
 > **K-series variant:** Collins adapter and bracket selection is engine-specific. Do not assume a K24A bracket applies to K20A2, K20Z3, K24Z3 or an unlisted block.
+
+</div>
 
 ### Why choose it
 
@@ -69,9 +83,23 @@ KPower's current RX-8 compatibility guide and mount listing document a 2006-2011
 
 KPower nevertheless says it does **not** offer a complete RX-8 package because firewall work remains required.
 
+<div class="variant-note"
+     data-when="architecture.front=kpower_nc;chassis.year=2003|2004|2005"
+     data-variant-label="Early S1 KPower year range"
+     markdown="1">
+
 > **RX-8 variant - early S1:** Do not assume current KPower NC/RX-8 subframe and mount listings apply to 2003/04-2005 cars. Current public RX-8 product year ranges reviewed for this guide begin at 2006.
->
+
+</div>
+
+<div class="variant-note"
+     data-when="architecture.front=kpower_nc;engine.block=k20a2|k20z1|k24a1|k20c1"
+     data-variant-label="KPower excluded block family"
+     markdown="1">
+
 > **K-series variant:** KPower's standard mount family supports a defined older-K list and excludes blocks such as K20A2, K20Z1 and K24A1. Newer K20C-family engines are outside KPower's older-K product scope.
+
+</div>
 
 ### Why choose it
 
