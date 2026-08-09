@@ -1,11 +1,20 @@
 ---
 layout: page
 title: "05 — Fitment and fabrication"
+build_topics:
+  - fitment
+  - mounts
+  - steering
+  - engine
+  - cooling
+  - exhaust
 ---
 
 # 05 — Dry-fit, firewall and front-structure work
 
 This is the most fabrication-intensive section of the swap.
+
+The rear engine envelope changes with block deck height, head family, coolant neck, valve cover, cam sensors and breather hardware. Review the [K-series engine and head/block selection reference](../reference/k-series-engine-head-combinations/) before using any published firewall example as guidance.
 
 ## 5.1 Prepare the engine for *mock-up*, not final assembly
 
@@ -30,14 +39,14 @@ On the retained-RX-8-transmission path, the **transmission/PPF relationship is t
 
 Sequence:
 
-1. mate K24, adapter and RX-8 transmission per the adapter manufacturer's instructions;
+1. mate the selected K-series engine, adapter and RX-8 transmission per the adapter manufacturer's instructions;
 2. remove shifter if required for installation;
 3. support the differential/PPF;
 4. place the engine/transmission into the bay;
 5. bring the transmission into its intended PPF position without forcing it;
 6. only then judge firewall, rack and oil-pan conflicts.
 
-Independent Collins-path build logs report that the PPF's elongated mounting holes provided enough adjustment for the slightly shifted transmission position. Verify this on the actual S2 rather than relying on that anecdote.
+Independent Collins-path build logs report that the PPF's elongated mounting holes provided enough adjustment for a slightly shifted transmission position. Verify this on the actual chassis rather than relying on that anecdote.
 
 ## 5.3 Firewall/cowl process
 
@@ -122,6 +131,7 @@ Pass when:
 
 | Claim | Source |
 | --- | --- |
+| KPower's engine-selection guidance and K-series coolant/manifold documentation show that K20/K24 block height and PRB versus RBB/RBC head architecture change the rear engine package. | [KPower Industries](https://kpower.industries/blogs/news/engine-guidance-for-a-successful-project) |
 | Collins' retained-RX-8-transmission instructions define the adapter install sequence, firewall recess guidance, rack relocation, crossmember notch, ABS relocation and starter/bellhousing clearance work. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
 | KPower's RX-8-compatible architecture should be expected to require extensive firewall cutting and welding. | [KPower Industries](https://kpower.industries/blogs/news/rx8-compatible-k-swap-components-now-available-from-kpower-industries) |
 | Completed K24RX8 fitment work documents cowl/firewall packaging conflicts, repeated mock-up and stock-subframe interference. | [K24RX8](https://k24rx8.com/2018/10/23/initial-fitment/) |

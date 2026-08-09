@@ -1,6 +1,13 @@
 ---
 layout: page
 title: "10 — First start and commissioning"
+build_topics:
+  - commissioning
+  - electrical
+  - ecu
+  - fuel
+  - cooling
+  - safety
 ---
 
 # 10 — First start and commissioning
@@ -48,7 +55,7 @@ Run pump with engine off.
 - stop immediately for any seepage
 - verify pressure behavior/hold appropriate to the system design
 
-Do not use the original RX-8 54–65 psi factory specification as a K24 calibration target unless your chosen injector/fuel strategy explicitly calls for it.
+Do not use the original RX-8 54-65 psi factory specification as a K-series calibration target unless your chosen injector/fuel strategy explicitly calls for it.
 
 ## 10.4 Establish oil pressure before firing
 
@@ -128,5 +135,5 @@ Pass only with repeatable:
 
 | Claim | Source |
 | --- | --- |
-| The original RX-8 fuel-pressure service value should be treated as pump/feed context, not automatically as the K24 calibration target. | [Operation CHARM](https://charm.li/Mazda/2009/RX8%202RTR-1.3L/Repair%20and%20Diagnosis/Powertrain%20Management/Tune-up%20and%20Engine%20Performance%20Checks/Fuel%20Pressure/Testing%20and%20Inspection/) |
-| KPower's installation-guides index is the source for universal K24 harness and basemap context used during ECU commissioning. | [KPower Industries](https://kpower.industries/pages/installation-guides) |
+| The original RX-8 fuel-pressure service value should be treated as pump/feed context, not automatically as the K-series calibration target. | [Operation CHARM](https://charm.li/Mazda/2009/RX8%202RTR-1.3L/Repair%20and%20Diagnosis/Powertrain%20Management/Tune-up%20and%20Engine%20Performance%20Checks/Fuel%20Pressure/Testing%20and%20Inspection/) |
+| KPower's installation-guides index is the source for K-series harness and basemap context used during ECU commissioning. | [KPower Industries](https://kpower.industries/pages/installation-guides) |

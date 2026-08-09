@@ -1,6 +1,14 @@
 ---
 layout: page
 title: "11 — Shakedown and validation"
+build_topics:
+  - validation
+  - safety
+  - steering
+  - eps
+  - abs
+  - cooling
+  - driveline
 ---
 
 # 11 — Alignment, shakedown and validation
@@ -124,5 +132,5 @@ The swap is complete when it can document:
 | Claim | Source |
 | --- | --- |
 | Collins' retained-RX-8-transmission instructions document rack relocation, making alignment and bump-steer validation mandatory after the change. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/pages/honda-k-series-to-mazda-rx-8-install-instructions) |
-| Collins' RX-8 CAN emulator claims are treated as integration candidates, not proof that ABS/DSC functions are validated on a 2009 S2. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/products/rx-8-wiring-emulator-for-canbus) |
-| All4Swap's model-year-aware RX-8 CAN interface flow supports explicit S2 validation before relying on warning-lamp or cluster behavior. | [All4Swap](https://all4swap.ru/product/rx8) |
+| Collins' RX-8 CAN emulator claims are treated as integration candidates, not proof that ABS/DSC functions are validated on the selected RX-8 variant. | [Collins Performance Technologies](https://collinsperformancetechnologies.com/products/rx-8-wiring-emulator-for-canbus) |
+| All4Swap's model-year-aware RX-8 CAN interface flow supports explicit variant validation before relying on warning-lamp or cluster behavior. | [All4Swap](https://all4swap.ru/product/rx8) |

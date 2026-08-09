@@ -1,0 +1,5 @@
+<script id="build-options-data" type="application/json">{{ site.data.build_options | jsonify }}</script>
+<script id="build-compatibility-data" type="application/json">{{ site.data.compatibility | jsonify }}</script>
+<script id="build-page-topics-data" type="application/json">{{ page.build_topics | jsonify }}</script>
+<script src="{{ '/assets/js/build-config-core.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/build-config-ui.js' | relative_url }}" defer></script>

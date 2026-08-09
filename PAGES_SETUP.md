@@ -18,14 +18,15 @@ The `minima` theme and `_config.yml` keep the site dependency-light. The workflo
 
 Giscus requires GitHub Discussions and the giscus GitHub App.
 
+Current status: the site template includes the giscus comments section on every page that uses `layout: page`, and `docs/_config.yml` has the verified repository and Announcements category IDs.
+
 1. In the repository, go to **Settings -> General -> Features** and enable **Discussions**.
 2. Install the giscus app from `https://github.com/apps/giscus` for this repository.
 3. Open `https://giscus.app/` and enter `F0rged/Ultimate-RX8-K24-Swap-Guide`.
-4. Use `pathname` mapping and choose a category that allows new discussions, such as `General`.
-5. Copy the generated `data-repo-id` and `data-category-id` values into `docs/_config.yml`.
-6. Change `giscus.enabled` from `false` to `true`.
+4. Use `pathname` mapping and choose `Announcements`.
+5. If the category changes later, copy the generated `data-category-id` value into `docs/_config.yml`.
 
-The shared page layout automatically adds comments to every guide chapter once those values are present.
+The shared page layout automatically adds comments to every page. The include intentionally skips the giscus script when any required value is blank, so the public site does not ship a broken comments widget.
 
 ## AI-assisted maintenance
 

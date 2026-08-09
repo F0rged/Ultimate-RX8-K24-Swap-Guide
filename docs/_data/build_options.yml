@@ -1,0 +1,223 @@
+schema_version: 1
+
+fields:
+  - path: chassis.series
+    group: Chassis
+    label: RX-8 series
+    options:
+      - { value: s1, label: "Series 1 (S1)" }
+      - { value: s2, label: "Series 2 (S2 / refreshed)" }
+      - { value: other, label: "Other / unsure" }
+
+  - path: chassis.year
+    group: Chassis
+    label: Model year
+    options:
+      - { value: "2003", label: "2003" }
+      - { value: "2004", label: "2004" }
+      - { value: "2005", label: "2005" }
+      - { value: "2006", label: "2006" }
+      - { value: "2007", label: "2007" }
+      - { value: "2008", label: "2008" }
+      - { value: "2009", label: "2009" }
+      - { value: "2010", label: "2010" }
+      - { value: "2011", label: "2011" }
+      - { value: "2012", label: "2012" }
+      - { value: other, label: "Other / unsure" }
+
+  - path: chassis.market
+    group: Chassis
+    label: Market
+    options:
+      - { value: usdm, label: "USDM" }
+      - { value: cdm, label: "Canadian" }
+      - { value: jdm, label: "JDM" }
+      - { value: eudm, label: "European" }
+      - { value: adm, label: "Australian" }
+      - { value: other, label: "Other / unsure" }
+
+  - path: chassis.steering
+    group: Chassis
+    label: Steering side
+    options:
+      - { value: lhd, label: "LHD" }
+      - { value: rhd, label: "RHD" }
+      - { value: other, label: "Other / unsure" }
+
+  - path: chassis.originalTransmission
+    group: Chassis
+    label: Original transmission
+    options:
+      - { value: rx8_5mt, label: "RX-8 5-speed manual" }
+      - { value: rx8_6mt, label: "RX-8 6-speed manual" }
+      - { value: rx8_4at, label: "RX-8 4-speed automatic" }
+      - { value: rx8_6at, label: "RX-8 6-speed automatic" }
+      - { value: other, label: "Other / unsure" }
+
+  - path: engine.block
+    group: Engine
+    label: Engine block
+    options:
+      - { value: jdm_k24a_rbb, label: "JDM K24A / RBB-family engine" }
+      - { value: k24a2, label: "K24A2" }
+      - { value: k24a3, label: "K24A3" }
+      - { value: k24a4, label: "K24A4" }
+      - { value: k24a8, label: "K24A8" }
+      - { value: k24a1, label: "K24A1" }
+      - { value: k20z3, label: "K20Z3" }
+      - { value: k20z4, label: "K20Z4" }
+      - { value: k20a2, label: "K20A2" }
+      - { value: k20z1, label: "K20Z1" }
+      - { value: k24z3, label: "K24Z3" }
+      - { value: k20c1, label: "K20C1 / newer turbo architecture" }
+      - { value: other, label: "Other K-series / unsure" }
+
+  - path: engine.head
+    group: Engine
+    label: Cylinder-head family
+    options:
+      - { value: prb, label: "PRB / K20A2-style" }
+      - { value: rbc, label: "RBC / K20Z-style" }
+      - { value: rbb, label: "RBB / K24A-style" }
+      - { value: r40, label: "R40 / K24Z-style" }
+      - { value: other, label: "Other / unsure" }
+
+  - path: engine.oilPump
+    group: Engine
+    label: Oil-pump family
+    options:
+      - { value: k20_prb, label: "K20 / PRB-style pump" }
+      - { value: k24_balance, label: "K24A balance-shaft pump" }
+      - { value: k24z, label: "K24Z-family / other" }
+      - { value: other, label: "Other / unsure" }
+
+  - path: engine.throttle
+    group: Engine
+    label: Throttle strategy
+    options:
+      - { value: dbw, label: "Drive-by-wire (DBW)" }
+      - { value: dbc, label: "Drive-by-cable (DBC)" }
+      - { value: other, label: "Other / undecided" }
+
+  - path: engine.sensorFamily
+    group: Engine
+    label: Trigger / sensor family
+    options:
+      - { value: k24a_04_08, label: "2004-2008 K24A-style sensors/triggers" }
+      - { value: k20_older, label: "Older K20-family sensors/triggers" }
+      - { value: k24z, label: "K24Z-family sensors/triggers" }
+      - { value: other, label: "Other / unsure" }
+
+  - path: architecture.front
+    group: Architecture
+    label: Front / mount architecture
+    options:
+      - { value: collins, label: "Collins / retained RX-8 front-driveline architecture" }
+      - { value: kpower_nc, label: "KPower NC-derived RX-8 front architecture" }
+      - { value: custom, label: "Custom / other" }
+
+  - path: architecture.transmission
+    group: Architecture
+    label: Transmission
+    options:
+      - { value: rx8_5mt, label: "RX-8 5-speed manual" }
+      - { value: rx8_6mt, label: "RX-8 6-speed manual" }
+      - { value: nc_5mt, label: "NC 5-speed manual" }
+      - { value: nc_6mt, label: "NC 6-speed manual" }
+      - { value: custom, label: "Custom / other" }
+
+  - path: architecture.steering
+    group: Architecture
+    label: Steering architecture
+    options:
+      - { value: rx8_eps, label: "Factory RX-8 EPS" }
+      - { value: standalone_eps, label: "Standalone EPS" }
+      - { value: nc_hydraulic, label: "NC hydraulic rack/system" }
+      - { value: custom, label: "Custom / other" }
+
+  - path: architecture.ppf
+    group: Architecture
+    label: PPF / rear-driveline strategy
+    options:
+      - { value: retained, label: "Retain RX-8 PPF/rear driveline" }
+      - { value: custom, label: "Custom / converted rear driveline" }
+
+  - path: electronics.ecu
+    group: Electronics
+    label: Engine ECU
+    options:
+      - { value: haltech, label: "Haltech standalone" }
+      - { value: other_standalone, label: "Other standalone ECU" }
+      - { value: honda_oem, label: "Honda OEM ECU / modified strategy" }
+      - { value: custom, label: "Custom / undecided" }
+
+  - path: electronics.harness
+    group: Electronics
+    label: Engine harness
+    options:
+      - { value: kpower_dbw_k24a, label: "KPower universal DBW / K24A-sensor harness" }
+      - { value: dbc, label: "DBC-oriented harness" }
+      - { value: k24z_custom, label: "K24Z-specific/custom harness" }
+      - { value: custom, label: "Custom / other" }
+
+  - path: electronics.instrumentation
+    group: Electronics
+    label: Instrumentation
+    options:
+      - { value: oem_cluster, label: "OEM RX-8 cluster as primary" }
+      - { value: standalone_dash, label: "Standalone dash as primary" }
+      - { value: both, label: "Both" }
+      - { value: custom, label: "Other / undecided" }
+
+  - path: electronics.can
+    group: Electronics
+    label: RX-8 CAN strategy
+    options:
+      - { value: none, label: "No OEM CAN integration required initially" }
+      - { value: haltech_s1, label: "Haltech S1 chassis integration" }
+      - { value: commercial_emulator, label: "Commercial RX-8 CAN emulator/interface" }
+      - { value: custom, label: "Custom CAN engineering" }
+
+  - path: systems.coolantOutlet
+    group: Systems
+    label: Coolant-outlet strategy
+    options:
+      - { value: stock, label: "Stock engine outlet" }
+      - { value: rbb_rbc_intake_side, label: "RBB/RBC intake-side RWD outlet" }
+      - { value: prb_rwd, label: "PRB/K20A2-style RWD outlet" }
+      - { value: r40_custom, label: "R40/K24Z-specific solution" }
+      - { value: custom, label: "Custom / other" }
+
+  - path: systems.radiator
+    group: Systems
+    label: Radiator
+    options:
+      - { value: rx8_04_08, label: "RX-8 2004-2008 geometry" }
+      - { value: rx8_09_11, label: "RX-8 2009-2011 geometry" }
+      - { value: custom, label: "OEM/custom/other" }
+
+  - path: systems.intake
+    group: Systems
+    label: Intake-manifold family
+    options:
+      - { value: rbb, label: "RBB/RBC-compatible RWD intake" }
+      - { value: prb, label: "PRB-compatible RWD intake" }
+      - { value: r40, label: "R40/K24Z-compatible RWD intake" }
+      - { value: custom, label: "Custom / other" }
+
+  - path: systems.exhaust
+    group: Systems
+    label: Exhaust/header family
+    options:
+      - { value: four_port_rx8_421, label: "Four-port RX-8/K-swap 4-2-1 style" }
+      - { value: four_port_custom, label: "Other four-port custom header" }
+      - { value: r40_single_exit, label: "K24Z/R40 single-exit solution" }
+      - { value: custom, label: "Custom / other" }
+
+  - path: systems.ac
+    group: Systems
+    label: A/C goal
+    options:
+      - { value: retain, label: "Retain / restore A/C" }
+      - { value: phase2, label: "Add A/C later" }
+      - { value: delete, label: "No A/C" }

@@ -1,6 +1,6 @@
-title: RX-8 K24 Swap Guide
-description: Research-backed sequential guide for K24 swapping a Mazda RX-8, with 2009 S2 and JDM K24A/RBB notes.
-url: "http://rx8-kswap.importfanatik.com"
+title: RX-8 K-Series Swap Guide
+description: Research-backed guide to Honda K-series swaps across Mazda RX-8 variants, with model-year and engine-specific compatibility notes.
+url: "https://rx8-kswap.importfanatik.com"
 baseurl: ""
 repository: F0rged/Ultimate-RX8-K24-Swap-Guide
 theme: minima
@@ -29,9 +29,12 @@ defaults:
       area_url: /reference/
 
 giscus:
-  enabled: false
+  enabled: true
   repo: F0rged/Ultimate-RX8-K24-Swap-Guide
-  repo_id: ""
-  category: "General"
-  category_id: ""
+  repo_id: "R_kgDOTyXbHA"
+  category: "Announcements"
+  category_id: "DIC_kwDOTyXbHM4DC-Ez"
   mapping: pathname
+  strict: "0"
+  input_position: top
+  theme: light
