@@ -1,14 +1,8 @@
 <section class="build-config-bar" id="build-config-panel" aria-label="Build configuration">
   <div class="build-config-bar__header">
-    <strong>Your Build</strong>
-    <label class="build-config-toggle" for="build-config-guidance">
-      <input type="checkbox" id="build-config-guidance" aria-controls="build-config-panel-body build-config-alerts" checked>
-      <span>Show build-specific guidance</span>
-    </label>
+    <label class="build-config-toggle-label" for="build-config-guidance">Show Guidance for your specific build</label>
+    <input type="checkbox" id="build-config-guidance" class="build-config-toggle" aria-controls="build-config-panel-body build-config-alerts" checked>
   </div>
-  <p class="build-config-bar__collapsed-help">
-    Customize recommendations and warnings throughout the guide.
-  </p>
   <div class="build-config-bar__body" id="build-config-panel-body">
     <p class="build-config-bar__help">
       Configure your build below. The guide will use these choices to show additional recommendations, compatibility notes, and warnings relevant to your setup.
