@@ -235,6 +235,28 @@
     return count;
   }
 
+  function variantDisplayState(config, expression, mode, safety) {
+    const currentMode = ["context", "mine", "all"].includes(mode) ? mode : "context";
+    const configured = selectedValueCount(config) > 0;
+    const filterState = configured ? evaluateExpression(config, expression) : "unknown";
+    const isSafety = safety === true || safety === "true";
+    const result = {
+      filterState: filterState,
+      hidden: false,
+      collapsed: false
+    };
+
+    if (isSafety || currentMode === "all") return result;
+
+    if (currentMode === "mine") {
+      result.hidden = filterState !== "match";
+      return result;
+    }
+
+    if (filterState === "nomatch") result.collapsed = true;
+    return result;
+  }
+
   return {
     SCHEMA_VERSION: SCHEMA_VERSION,
     clone: clone,
@@ -247,6 +269,7 @@
     sanitizeConfig: sanitizeConfig,
     encodeConfig: encodeConfig,
     decodeConfig: decodeConfig,
-    selectedValueCount: selectedValueCount
+    selectedValueCount: selectedValueCount,
+    variantDisplayState: variantDisplayState
   };
 });
