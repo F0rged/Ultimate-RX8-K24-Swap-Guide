@@ -1,6 +1,13 @@
 ---
 layout: page
 title: "13 - Open questions / validation register"
+build_topics:
+  - research
+  - validation
+  - architecture
+  - engine
+  - electrical
+  - can
 ---
 
 # 13 - Open questions and validation register

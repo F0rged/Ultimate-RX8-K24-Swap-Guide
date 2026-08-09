@@ -1,6 +1,12 @@
 ---
 layout: page
 title: "07 — Steering and suspension"
+build_topics:
+  - steering
+  - suspension
+  - eps
+  - can
+  - validation
 ---
 
 # 07 — Steering and suspension

@@ -1,6 +1,11 @@
 ---
 layout: page
 title: "06 — Transmission, clutch and driveline"
+build_topics:
+  - transmission
+  - driveline
+  - clutch
+  - architecture
 ---
 
 # 06 — Transmission, clutch and driveline

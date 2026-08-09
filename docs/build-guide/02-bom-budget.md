@@ -1,6 +1,15 @@
 ---
 layout: page
 title: "02 — BOM, budget and buy order"
+build_topics:
+  - architecture
+  - engine
+  - mounts
+  - transmission
+  - cooling
+  - electrical
+  - intake
+  - exhaust
 ---
 
 # 02 — BOM, budget and buy order

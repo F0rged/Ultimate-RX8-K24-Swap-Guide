@@ -69,6 +69,90 @@ test("unknown keys are discarded by sanitizeConfig", () => {
   assert.equal("extra" in clean.engine, false);
 });
 
+test("alert preference defaults and sanitizes within schema version 1", () => {
+  assert.equal(Core.defaultConfig().ui.alerts, "relevant");
+  assert.equal(Core.selectedValueCount(Core.defaultConfig()), 0);
+
+  const oldConfig = Core.defaultConfig();
+  delete oldConfig.ui.alerts;
+  assert.equal(Core.sanitizeConfig(oldConfig).ui.alerts, "relevant");
+
+  const invalid = Core.defaultConfig();
+  invalid.ui.alerts = "everything";
+  assert.equal(Core.sanitizeConfig(invalid).ui.alerts, "relevant");
+});
+
+test("alert preference round trips through share URLs", () => {
+  const c = Core.defaultConfig();
+  c.ui.alerts = "none";
+  const decoded = Core.decodeConfig(Core.encodeConfig(c));
+  assert.equal(decoded.ui.alerts, "none");
+});
+
+test("page alert rules are scoped to non-positive matching issues and page topics", () => {
+  const c = config({
+    "chassis.series": "s2",
+    "architecture.front": "collins",
+    "architecture.transmission": "rx8_6mt",
+    "architecture.steering": "rx8_eps",
+    "chassis.year": "2009",
+    "systems.radiator": "rx8_04_08"
+  });
+  const rules = [
+    {
+      id: "positive_transmission",
+      when: "architecture.front=collins;architecture.transmission=rx8_6mt",
+      status: "documented",
+      severity: "info",
+      topics: ["transmission"]
+    },
+    {
+      id: "s2_eps",
+      when: "chassis.series=s2;architecture.steering=rx8_eps",
+      status: "partial",
+      severity: "warning",
+      topics: ["steering", "electrical", "can"]
+    },
+    {
+      id: "radiator",
+      when: "chassis.year=2009;systems.radiator=rx8_04_08",
+      status: "partial",
+      severity: "warning",
+      topics: ["cooling", "radiator"]
+    }
+  ];
+
+  assert.deepEqual(
+    Core.pageAlertRules(c, rules, ["steering"], "relevant").map((rule) => rule.id),
+    ["s2_eps"]
+  );
+  assert.deepEqual(Core.pageAlertRules(c, rules, ["transmission"], "relevant"), []);
+  assert.deepEqual(Core.pageAlertRules(c, rules, ["steering"], "none"), []);
+  assert.deepEqual(Core.pageAlertRules(c, rules, [], "relevant"), []);
+  assert.deepEqual(
+    Core.matchingRules(c, rules).map((rule) => rule.id),
+    ["positive_transmission", "s2_eps", "radiator"]
+  );
+});
+
+test("issue rules and counts exclude positive confirmations", () => {
+  const c = Core.defaultConfig();
+  const rules = [
+    { id: "positive", when: "", status: "documented", severity: "info" },
+    { id: "warning", when: "", status: "partial", severity: "warning" },
+    { id: "error", when: "", status: "incompatible", severity: "error" },
+    { id: "unvalidated", when: "", status: "unvalidated", severity: "warning" }
+  ];
+
+  assert.deepEqual(Core.issueRules(c, rules).map((rule) => rule.id), [
+    "warning",
+    "error",
+    "unvalidated"
+  ]);
+  assert.equal(Core.issueCount(c, rules, "relevant"), 3);
+  assert.equal(Core.issueCount(c, rules, "none"), 0);
+});
+
 test("my build mode shows only confirmed variant matches", () => {
   const c = config({ "engine.head": "rbb" });
   assert.deepEqual(Core.variantDisplayState(c, "engine.head=rbb", "mine"), {
@@ -104,9 +188,22 @@ test("all and context modes preserve alternative visibility differently", () => 
 
 test("safety variant notes are never hidden or collapsed by filtering", () => {
   const c = Core.defaultConfig();
-  assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", "mine", true), {
-    filterState: "unknown",
-    hidden: false,
+  c.ui.alerts = "none";
+  ["context", "mine", "all"].forEach((mode) => {
+    assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", mode, true), {
+      filterState: "unknown",
+      hidden: false,
+      collapsed: false
+    });
+  });
+});
+
+test("alert preference does not affect non-safety variant filtering", () => {
+  const c = config({ "engine.head": "rbb" });
+  c.ui.alerts = "none";
+  assert.deepEqual(Core.variantDisplayState(c, "engine.head=prb", "mine"), {
+    filterState: "nomatch",
+    hidden: true,
     collapsed: false
   });
 });

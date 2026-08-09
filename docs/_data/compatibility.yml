@@ -46,6 +46,7 @@ rules:
     when: "architecture.front=kpower_nc;chassis.year=2003|2004|2005"
     status: unvalidated
     severity: warning
+    topics: [architecture, chassis, mounts, fitment]
     message: "Current KPower RX-8 mount/subframe product fitment begins at 2006. Treat this early-S1 KPower combination as unvalidated until fitment is confirmed."
     sources: [kpower_mounts]
 
@@ -53,6 +54,7 @@ rules:
     when: "architecture.front=kpower_nc;engine.block=k20a2"
     status: incompatible
     severity: error
+    topics: [architecture, mounts, fitment, engine]
     message: "KPower explicitly excludes the K20A2 block from its standard NC/RX-8 mount bolt pattern. Use another mount architecture or a custom solution."
     sources: [kpower_mounts, kpower_engine_guide]
 
@@ -60,6 +62,7 @@ rules:
     when: "architecture.front=kpower_nc;engine.block=k20z1"
     status: incompatible
     severity: error
+    topics: [architecture, mounts, fitment, engine]
     message: "KPower explicitly excludes the K20Z1 block from its standard NC/RX-8 mount bolt pattern."
     sources: [kpower_mounts, kpower_engine_guide]
 
@@ -67,6 +70,7 @@ rules:
     when: "architecture.front=kpower_nc;engine.block=k24a1"
     status: incompatible
     severity: error
+    topics: [architecture, mounts, fitment, engine]
     message: "KPower explicitly excludes the K24A1 block from its standard NC/RX-8 mount bolt pattern."
     sources: [kpower_mounts, kpower_engine_guide]
 
@@ -74,6 +78,7 @@ rules:
     when: "architecture.front=kpower_nc;engine.block=k24z3"
     status: unvalidated
     severity: warning
+    topics: [architecture, mounts, fitment, engine]
     message: "K24Z3 is not in KPower's standard NC/RX-8 mount-support family. Do not infer fitment from K24A compatibility."
     sources: [kpower_engine_guide]
 
@@ -81,6 +86,7 @@ rules:
     when: "engine.block=k20c1"
     status: incompatible
     severity: error
+    topics: [engine, architecture, mounts, fitment]
     message: "K20C1 is outside the older-K product scope documented for this guide and is explicitly not compatible with KPower's older-K products."
     sources: [kpower_engine_guide]
 
@@ -88,6 +94,7 @@ rules:
     when: "architecture.front=collins;engine.block=k20a2"
     status: documented
     severity: info
+    topics: [architecture, mounts, engine]
     message: "Collins currently offers an RX-8 engine-bracket adapter specifically for K20A2."
     sources: [collins_k20a2]
 
@@ -95,6 +102,7 @@ rules:
     when: "architecture.front=collins;engine.block=k20z3"
     status: documented
     severity: info
+    topics: [architecture, mounts, engine]
     message: "Collins currently offers an RX-8 engine-bracket adapter specifically for K20Z3."
     sources: [collins_k20z3]
 
@@ -102,6 +110,7 @@ rules:
     when: "architecture.front=collins;engine.block=k24a2|k24a4|k24z3"
     status: documented
     severity: info
+    topics: [architecture, mounts, engine, intake, exhaust, cooling]
     message: "Collins currently lists an RX-8 engine-bracket adapter for K24A2, K24A4 and K24Z3. This does not by itself validate intake, exhaust, trigger or cooling compatibility."
     sources: [collins_k24]
 
@@ -109,6 +118,7 @@ rules:
     when: "architecture.front=collins;architecture.transmission=rx8_5mt|rx8_6mt"
     status: documented
     severity: info
+    topics: [architecture, transmission, driveline]
     message: "Collins currently lists RX-8 5-speed and 6-speed manual transmissions for its K-series adapter path."
     sources: [collins_kit]
 
@@ -116,6 +126,7 @@ rules:
     when: "chassis.originalTransmission=rx8_4at|rx8_6at;architecture.transmission=rx8_5mt|rx8_6mt"
     status: partial
     severity: warning
+    topics: [chassis, transmission, driveline, clutch, electrical]
     message: "This is an automatic-to-manual chassis conversion in addition to the engine swap. Resolve pedals, clutch hydraulics, driveline and electrical/interlock details explicitly."
     sources: [collins_kit]
 
@@ -123,6 +134,7 @@ rules:
     when: "chassis.series=s2;electronics.can=haltech_s1"
     status: incompatible
     severity: error
+    topics: [electrical, ecu, can, harness, instrumentation]
     message: "The selected Haltech chassis integration is documented for RX-8 Series 1, not Series 2. Do not apply the S1 CAN strategy to an S2."
     sources: [haltech_s1, kpower_rx8]
 
@@ -130,6 +142,7 @@ rules:
     when: "chassis.series=s1;electronics.can=haltech_s1;chassis.originalTransmission=rx8_5mt|rx8_6mt"
     status: documented
     severity: info
+    topics: [electrical, ecu, can, harness, instrumentation, abs]
     message: "Haltech documents Series 1 manual RX-8 integration, with ABS-module limitations that still need to match the actual car."
     sources: [haltech_s1]
 
@@ -137,6 +150,7 @@ rules:
     when: "chassis.series=s2;electronics.can=commercial_emulator"
     status: partial
     severity: warning
+    topics: [electrical, ecu, can, instrumentation, validation]
     message: "Treat S2 commercial CAN-emulator support as exact-year/configuration dependent until the selected vendor confirms the application and safety functions are validated."
     sources: [kpower_rx8]
 
@@ -144,6 +158,7 @@ rules:
     when: "chassis.series=s2;architecture.steering=rx8_eps"
     status: partial
     severity: warning
+    topics: [steering, electrical, can, eps, validation]
     message: "Factory S2 EPS should not be assumed to operate normally after the Renesis PCM is removed. Define and validate the CAN/control strategy before road use."
     sources: [kpower_rx8]
 
@@ -151,6 +166,7 @@ rules:
     when: "engine.head=prb;systems.coolantOutlet=rbb_rbc_intake_side"
     status: incompatible
     severity: error
+    topics: [engine, cooling, intake, fitment]
     message: "The selected coolant outlet is for the RBB/RBC family, while the configured head is PRB. Select a PRB/K20A2-style RWD outlet or a verified custom solution."
     sources: [kpower_rbb_neck, kpower_prb_neck]
 
@@ -158,6 +174,7 @@ rules:
     when: "engine.head=rbb|rbc;systems.coolantOutlet=prb_rwd"
     status: incompatible
     severity: error
+    topics: [engine, cooling, intake, fitment]
     message: "The selected PRB coolant outlet does not match the configured RBB/RBC head family."
     sources: [kpower_rbb_neck, kpower_prb_neck]
 
@@ -165,6 +182,7 @@ rules:
     when: "engine.head=r40;systems.exhaust=four_port_rx8_421|four_port_custom"
     status: incompatible
     severity: error
+    topics: [engine, exhaust, fitment]
     message: "R40/K24Z uses an integrated single exhaust exit. Do not apply a conventional older-K four-port header selection."
     sources: [kpower_k24z]
 
@@ -172,6 +190,7 @@ rules:
     when: "engine.block=k24z3;electronics.harness=kpower_dbw_k24a"
     status: incompatible
     severity: error
+    topics: [engine, electrical, harness, ecu]
     message: "The selected K24A-sensor DBW harness should not be assumed compatible with K24Z3 trigger/wiring architecture."
     sources: [kpower_k24z, kpower_dbw]
 
@@ -179,6 +198,7 @@ rules:
     when: "electronics.harness=kpower_dbw_k24a;engine.sensorFamily!=k24a_04_08"
     status: partial
     severity: warning
+    topics: [engine, electrical, harness, ecu]
     message: "KPower's current universal DBW harness is designed around 2004-2008 K24A-style sensor/connectors. Verify adapters or choose a matching harness."
     sources: [kpower_dbw]
 
@@ -186,6 +206,7 @@ rules:
     when: "chassis.year=2009|2010|2011;systems.radiator=rx8_04_08"
     status: incompatible
     severity: error
+    topics: [chassis, cooling, radiator]
     message: "The configured radiator geometry is the 2004-2008 variant, but the chassis year is 2009-2011."
     sources: [kpower_rx8_parts]
 
@@ -193,5 +214,6 @@ rules:
     when: "chassis.year=2004|2005|2006|2007|2008;systems.radiator=rx8_09_11"
     status: incompatible
     severity: error
+    topics: [chassis, cooling, radiator]
     message: "The configured radiator geometry is the 2009-2011 variant, but the chassis year is 2004-2008."
     sources: [kpower_rx8_parts]

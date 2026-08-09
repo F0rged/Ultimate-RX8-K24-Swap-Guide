@@ -18,9 +18,11 @@
 
   const optionsData = readJsonElement("build-options-data");
   const compatibilityData = readJsonElement("build-compatibility-data");
+  const pageTopicsData = readJsonElement("build-page-topics-data");
   const fields = optionsData.fields || [];
   const rules = compatibilityData.rules || [];
   const sources = compatibilityData.sources || {};
+  const pageTopics = Array.isArray(pageTopicsData) ? pageTopicsData : [];
 
   const fieldByPath = new Map(fields.map(function (field) {
     return [field.path, field];
@@ -124,6 +126,18 @@
     const mode = document.getElementById("build-config-mode");
     if (mode) mode.value = config.ui.mode || "context";
 
+    const alertMode = document.getElementById("build-config-alert-mode");
+    if (alertMode) alertMode.value = config.ui.alerts || "relevant";
+
+    const issueCount = document.getElementById("build-config-issue-count");
+    if (issueCount) {
+      const count = Core.issueCount(config, rules, config.ui.alerts);
+      issueCount.hidden = count === 0;
+      issueCount.textContent = count === 1
+        ? "1 build compatibility issue"
+        : count + " build compatibility issues";
+    }
+
     const edit = document.getElementById("build-config-edit");
     if (edit) {
       edit.textContent = Core.selectedValueCount(config) ? "Edit build" : "Configure build";
@@ -187,7 +201,7 @@
         select.value = Core.getPath(current, field.path) || "";
         select.addEventListener("change", function () {
           Core.setPath(draft, field.path, select.value);
-          renderAlerts(draft, "build-config-dialog-alerts");
+          renderAlerts(draft, "build-config-dialog-alerts", "all");
         });
 
         wrapper.appendChild(label);
@@ -211,12 +225,14 @@
     return labels[rule.status] || rule.status || "Note";
   }
 
-  function renderAlerts(current, targetId) {
+  function renderAlerts(current, targetId, scope) {
     const target = document.getElementById(targetId);
     if (!target) return;
     target.innerHTML = "";
 
-    const activeRules = Core.matchingRules(current, rules);
+    const activeRules = scope === "page"
+      ? Core.pageAlertRules(current, rules, pageTopics, current.ui.alerts)
+      : Core.matchingRules(current, rules);
     activeRules.forEach(function (rule) {
       const panel = document.createElement("div");
       panel.className = "build-config-alert build-config-alert--" + (rule.severity || "info");
@@ -314,7 +330,7 @@
 
   function render() {
     renderSummary();
-    renderAlerts(config, "build-config-alerts");
+    renderAlerts(config, "build-config-alerts", "page");
     applyVariantFiltering();
     document.documentElement.classList.add("build-config-ready");
   }
@@ -324,7 +340,7 @@
     if (!dialog) return;
     draft = Core.clone(config);
     renderForm(draft);
-    renderAlerts(draft, "build-config-dialog-alerts");
+    renderAlerts(draft, "build-config-dialog-alerts", "all");
     if (typeof dialog.showModal === "function") {
       dialog.showModal();
     } else {
@@ -360,6 +376,7 @@
     const edit = document.getElementById("build-config-edit");
     const share = document.getElementById("build-config-share");
     const mode = document.getElementById("build-config-mode");
+    const alertMode = document.getElementById("build-config-alert-mode");
     const form = document.getElementById("build-config-form");
     const clear = document.getElementById("build-config-clear");
     const cancel = document.getElementById("build-config-cancel");
@@ -376,10 +393,19 @@
       });
     }
 
+    if (alertMode) {
+      alertMode.addEventListener("change", function () {
+        config.ui.alerts = alertMode.value;
+        saveConfig(config);
+        render();
+      });
+    }
+
     if (form) {
       form.addEventListener("submit", function (event) {
         event.preventDefault();
         draft.ui.mode = config.ui.mode;
+        draft.ui.alerts = config.ui.alerts;
         saveConfig(draft);
         closeDialog();
         render();
@@ -391,7 +417,7 @@
         draft = Core.defaultConfig();
         saveConfig(draft);
         renderForm(draft);
-        renderAlerts(draft, "build-config-dialog-alerts");
+        renderAlerts(draft, "build-config-dialog-alerts", "all");
         closeDialog();
         render();
       });

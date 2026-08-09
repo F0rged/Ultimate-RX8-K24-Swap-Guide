@@ -1,6 +1,14 @@
 ---
 layout: page
 title: "11 — Shakedown and validation"
+build_topics:
+  - validation
+  - safety
+  - steering
+  - eps
+  - abs
+  - cooling
+  - driveline
 ---
 
 # 11 — Alignment, shakedown and validation
