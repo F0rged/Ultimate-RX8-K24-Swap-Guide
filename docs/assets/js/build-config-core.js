@@ -259,7 +259,7 @@
   function pageAlertRules(config, rules, pageTopics, alertsPreference) {
     if (alertsPreference === "none") return [];
     if (!Array.isArray(pageTopics) || pageTopics.length === 0) return [];
-    return issueRules(config, rules).filter(function (rule) {
+    return matchingRules(config, rules).filter(function (rule) {
       return topicsIntersect(rule.topics, pageTopics);
     });
   }

@@ -436,6 +436,24 @@ body {
   font-size: 0.8rem;
 }
 
+.build-config-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 34px;
+  padding: 0.38rem 0.55rem;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--guide-ink);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.build-config-toggle input {
+  margin: 0;
+}
+
 .build-config-dialog {
   width: min(900px, calc(100vw - 2rem));
   max-height: calc(100vh - 2rem);

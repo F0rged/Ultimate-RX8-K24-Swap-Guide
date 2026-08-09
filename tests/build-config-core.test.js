@@ -89,7 +89,7 @@ test("alert preference round trips through share URLs", () => {
   assert.equal(decoded.ui.alerts, "none");
 });
 
-test("page alert rules are scoped to non-positive matching issues and page topics", () => {
+test("page guidance rules are scoped to matching rules and page topics", () => {
   const c = config({
     "chassis.series": "s2",
     "architecture.front": "collins",
@@ -126,7 +126,10 @@ test("page alert rules are scoped to non-positive matching issues and page topic
     Core.pageAlertRules(c, rules, ["steering"], "relevant").map((rule) => rule.id),
     ["s2_eps"]
   );
-  assert.deepEqual(Core.pageAlertRules(c, rules, ["transmission"], "relevant"), []);
+  assert.deepEqual(
+    Core.pageAlertRules(c, rules, ["transmission"], "relevant").map((rule) => rule.id),
+    ["positive_transmission"]
+  );
   assert.deepEqual(Core.pageAlertRules(c, rules, ["steering"], "none"), []);
   assert.deepEqual(Core.pageAlertRules(c, rules, [], "relevant"), []);
   assert.deepEqual(

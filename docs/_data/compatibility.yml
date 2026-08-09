@@ -158,7 +158,7 @@ rules:
     when: "chassis.series=s2;architecture.steering=rx8_eps"
     status: partial
     severity: warning
-    topics: [steering, electrical, can, eps, validation]
+    topics: [eps]
     message: "Factory S2 EPS should not be assumed to operate normally after the Renesis PCM is removed. Define and validate the CAN/control strategy before road use."
     sources: [kpower_rx8]
 
