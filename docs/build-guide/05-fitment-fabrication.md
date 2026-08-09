@@ -7,7 +7,7 @@ title: "05 — Fitment and fabrication"
 
 This is the most fabrication-intensive section of the swap.
 
-The rear engine envelope changes with block deck height, head family, coolant neck, valve cover, cam sensors and breather hardware. If the engine is not the reference K24A/RBB package, review the [K-series engine and head/block selection reference](../reference/k-series-engine-head-combinations/) before using any published firewall example as guidance.
+The rear engine envelope changes with block deck height, head family, coolant neck, valve cover, cam sensors and breather hardware. Review the [K-series engine and head/block selection reference](../reference/k-series-engine-head-combinations/) before using any published firewall example as guidance.
 
 ## 5.1 Prepare the engine for *mock-up*, not final assembly
 
@@ -32,14 +32,14 @@ On the retained-RX-8-transmission path, the **transmission/PPF relationship is t
 
 Sequence:
 
-1. mate K24, adapter and RX-8 transmission per the adapter manufacturer's instructions;
+1. mate the selected K-series engine, adapter and RX-8 transmission per the adapter manufacturer's instructions;
 2. remove shifter if required for installation;
 3. support the differential/PPF;
 4. place the engine/transmission into the bay;
 5. bring the transmission into its intended PPF position without forcing it;
 6. only then judge firewall, rack and oil-pan conflicts.
 
-Independent Collins-path build logs report that the PPF's elongated mounting holes provided enough adjustment for the slightly shifted transmission position. Verify this on the actual S2 rather than relying on that anecdote.
+Independent Collins-path build logs report that the PPF's elongated mounting holes provided enough adjustment for a slightly shifted transmission position. Verify this on the actual chassis rather than relying on that anecdote.
 
 ## 5.3 Firewall/cowl process
 

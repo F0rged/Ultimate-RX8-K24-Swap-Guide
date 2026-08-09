@@ -19,7 +19,7 @@ These figures exclude the RX-8 chassis itself and assume the selected K-series l
 
 The current additive **typical-value roll-up** of required/recommended reference-path BOM rows is approximately **$20.5k USD**. Treat that as a planning check rather than a quote: several rows are allowances and real builds will substitute, reuse or omit components.
 
-A useful sanity check is KPower's current NC pricing: its physical NC race package is about **$5.8k** with subframe, while its complete NC package is about **$10k** before the engine and many vehicle-specific extras. An RX-8 adds firewall/fabrication and S2 electronics work.
+A useful sanity check is KPower's current NC pricing: its physical NC race package is about **$5.8k** with subframe, while its complete NC package is about **$10k** before the engine and many vehicle-specific extras. An RX-8 adds firewall/fabrication and series-specific electronics work.
 
 ## Buy in stages
 
@@ -76,13 +76,13 @@ After first start:
 | JDM accessory conversion + engine service | USDM-style K24A water-pump housing, pump, alternator/idler + seals/consumables | $700–1,500 |
 | K→RX-8 adapter | Collins | ~$650 |
 | Flywheel | Collins K→RX-8 | ~$861 |
-| Engine mounts + K24 adapter | Collins | ~$604 |
+| Engine mounts + engine-specific adapter | Collins | ~$604 |
 | Rack spacers | Collins | ~$227 |
 | Clutch/slave/bolts/pilot | Collins / compatible | ~$550–900 |
-| Intake/DBW system | RWD manifold + 74 mm DBW + adapter + tube | ~$1,100–1,400 |
+| Intake/throttle system | RWD manifold + selected throttle + adapter + tube | ~$1,100-1,400 |
 | Header | RX-8-confirmed KPower 4-2-1 | ~$939 |
-| Engine management | Universal KPower/Haltech DBW package | from ~$4,195 |
-| Standalone dash (recommended S2 baseline) | Haltech iC-7 or equivalent | ~$1,195 |
+| Engine management | Standalone ECU/harness matched to selected engine | from ~$4,195 |
+| Standalone dash | Haltech iC-7 or equivalent | ~$1,195 |
 | Radiator | Year-specific RX-8 radiator example | ~$433 |
 | Fabrication / exhaust / hoses / heat / misc. | highly build-specific | $2,000–5,000 |
 | Tune + alignment | local service | $700–1,500 |

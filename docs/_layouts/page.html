@@ -4,10 +4,12 @@ layout: default
 
 <article class="page-content rx8-guide-page" itemscope itemtype="http://schema.org/Article">
   {% include guide-header.html %}
+  {% include build-config-ui.html %}
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
 
   {% include giscus.html %}
+  {% include build-config-data.html %}
 </article>

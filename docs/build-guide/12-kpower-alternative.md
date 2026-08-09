@@ -19,9 +19,23 @@ KPower's tubular NC/RX-8 subframe changes that equation. KPower states that when
 
 For a handling-focused build, that is a major advantage.
 
+<div class="variant-note"
+     data-when="architecture.front=kpower_nc;chassis.year=2003|2004|2005"
+     data-variant-label="Early S1 KPower year range"
+     markdown="1">
+
 > **RX-8 variant - year range:** Current KPower RX-8 mount/subframe listings reviewed for this guide begin at 2006 RX-8. Early S1 cars need vendor confirmation or measured validation before purchase.
->
+
+</div>
+
+<div class="variant-note"
+     data-when="architecture.front=kpower_nc;engine.block=k20a2|k20z1|k24a1|k20c1"
+     data-variant-label="KPower block support"
+     markdown="1">
+
 > **K-series variant - block support:** KPower's standard older-K mount family supports a defined block list and excludes K20A2, K20Z1 and K24A1. Do not assume every K-series block bolts to this path.
+
+</div>
 
 ## Documented KPower RX-8 component set
 

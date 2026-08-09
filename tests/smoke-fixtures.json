@@ -1,0 +1,81 @@
+{
+  "profiles": [
+    {
+      "name": "S2 K24A2 Collins",
+      "config": {
+        "chassis.series": "s2",
+        "chassis.year": "2009",
+        "chassis.market": "usdm",
+        "engine.block": "k24a2",
+        "engine.head": "rbb",
+        "architecture.front": "collins",
+        "architecture.transmission": "rx8_6mt",
+        "electronics.ecu": "haltech",
+        "electronics.can": "none"
+      },
+      "expected_rule_ids": [
+        "collins_k24_bracket_family",
+        "collins_manual_transmission_scope"
+      ]
+    },
+    {
+      "name": "Late S1 K20Z3 KPower",
+      "config": {
+        "chassis.series": "s1",
+        "chassis.year": "2007",
+        "engine.block": "k20z3",
+        "engine.head": "rbc",
+        "architecture.front": "kpower_nc"
+      },
+      "expected_rule_ids": []
+    },
+    {
+      "name": "Invalid KPower K20A2",
+      "config": {
+        "chassis.series": "s1",
+        "chassis.year": "2007",
+        "engine.block": "k20a2",
+        "engine.head": "prb",
+        "architecture.front": "kpower_nc"
+      },
+      "expected_rule_ids": [
+        "kpower_mount_excluded_k20a2"
+      ]
+    },
+    {
+      "name": "Early S1 KPower",
+      "config": {
+        "chassis.series": "s1",
+        "chassis.year": "2004",
+        "engine.block": "k24a2",
+        "architecture.front": "kpower_nc"
+      },
+      "expected_rule_ids": [
+        "kpower_early_s1_year_not_documented"
+      ]
+    },
+    {
+      "name": "K24Z with wrong header and harness",
+      "config": {
+        "engine.block": "k24z3",
+        "engine.head": "r40",
+        "systems.exhaust": "four_port_rx8_421",
+        "electronics.harness": "kpower_dbw_k24a"
+      },
+      "expected_rule_ids": [
+        "r40_four_port_header_mismatch",
+        "k24z_wrong_k24a_harness"
+      ]
+    },
+    {
+      "name": "S2 using S1 CAN selection",
+      "config": {
+        "chassis.series": "s2",
+        "electronics.can": "haltech_s1"
+      },
+      "expected_rule_ids": [
+        "s2_haltech_s1_can_mismatch"
+      ]
+    }
+  ]
+}

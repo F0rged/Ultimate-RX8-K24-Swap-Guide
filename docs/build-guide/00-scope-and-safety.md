@@ -33,9 +33,23 @@ Before following the prescriptive sequence, write down:
 - selected architecture: Collins retained RX-8 manual driveline, KPower NC-derived front architecture or custom/other;
 - ECU, CAN, steering-assist, ABS/DSC and A/C goals.
 
+<div class="variant-note"
+     data-when="chassis.originalTransmission=rx8_4at|rx8_6at"
+     data-variant-label="Automatic RX-8 donor"
+     markdown="1">
+
 > **RX-8 variant - automatic chassis:** Current Collins RX-8 adapter documentation is for 5-speed and 6-speed manual transmissions. An automatic donor needs a separate manual-conversion plan before the manual driveline chapters apply.
->
-> **K-series variant - newer K architectures:** K20C, K24W and other newer K families are outside the validated scope of this edition. Do not inherit older K20/K24A mount, adapter, trigger, intake, exhaust or wiring assumptions without separate research.
+
+</div>
+
+<div class="variant-note"
+     data-when="engine.block=k20c1|other"
+     data-variant-label="Newer or unlisted K architecture"
+     markdown="1">
+
+> **K-series variant - newer/unlisted K architectures:** K20C, K24W and other newer or unlisted K families are outside the validated scope of this edition. Do not inherit older K20/K24A mount, adapter, trigger, intake, exhaust or wiring assumptions without separate research.
+
+</div>
 
 ## Worked example, not universal baseline
 
@@ -76,7 +90,15 @@ There is conflicting credible evidence:
 - KPower's newer RX-8 compatibility guide says to expect extensive firewall cutting and welding.
 - Independent K24 RX-8 builds, including a JDM K24A/RBB-head build, have required significant firewall/cowl work.
 
+<div class="variant-note"
+     data-when="architecture.front=collins|kpower_nc|custom"
+     data-safety="true"
+     data-variant-label="Firewall safety"
+     markdown="1">
+
 Therefore this guide does **not** publish a universal cut template. The correct process is iterative mock-up: establish transmission/PPF position first, map all engine/head/sensor/coolant-neck clearance, then recess or cut only what the actual combination requires.
+
+</div>
 
 ## Legal/emissions note
 
