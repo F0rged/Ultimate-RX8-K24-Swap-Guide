@@ -11,6 +11,10 @@
   --guide-accent: #b6292f;
   --guide-accent-bright: #ef4b3f;
   --guide-dark: #151a22;
+  --guide-recommendation-bg: #eef8ef;
+  --guide-recommendation-border: #7fbd8d;
+  --guide-warning-bg: #fff1f1;
+  --guide-warning-border: #ef7b73;
 }
 
 body {
@@ -574,12 +578,16 @@ body {
   background: #fff;
 }
 
-.build-config-alert--warning {
-  border-left-color: var(--guide-accent-bright);
+.build-config-alert--recommendation {
+  border-color: var(--guide-recommendation-border);
+  border-left-color: var(--guide-recommendation-border);
+  background: var(--guide-recommendation-bg);
 }
 
-.build-config-alert--error {
-  border-left-color: var(--guide-accent);
+.build-config-alert--warning {
+  border-color: var(--guide-warning-border);
+  border-left-color: var(--guide-warning-border);
+  background: var(--guide-warning-bg);
 }
 
 .build-config-alert p {
@@ -606,50 +614,16 @@ body {
   background: var(--guide-panel);
 }
 
-.variant-note[data-filter-state="match"] {
-  border-left: 4px solid var(--guide-accent);
+.variant-note--recommendation {
+  border-color: var(--guide-recommendation-border);
+  border-left: 4px solid var(--guide-recommendation-border);
+  background: var(--guide-recommendation-bg);
 }
 
-.variant-note[data-filter-state="unknown"] {
-  border-style: dashed;
-}
-
-.variant-note--safety {
-  border-left: 4px solid var(--guide-accent-bright);
-}
-
-.variant-note[data-filter-state="unknown"]::before,
-.variant-note[data-filter-state="nomatch"]::before {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: var(--guide-muted);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.variant-note[data-filter-state="unknown"]::before {
-  content: "Configuration incomplete";
-}
-
-.variant-note[data-filter-state="nomatch"]::before {
-  content: "Alternative build guidance";
-}
-
-.variant-note__toggle {
-  width: 100%;
-  border: 0;
-  padding: 0.15rem 0;
-  color: var(--guide-accent);
-  background: transparent;
-  text-align: left;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.variant-note--collapsed .variant-note__body {
-  display: none;
+.variant-note--warning {
+  border-color: var(--guide-warning-border);
+  border-left: 4px solid var(--guide-warning-border);
+  background: var(--guide-warning-bg);
 }
 
 @media screen and (max-width: 700px) {
